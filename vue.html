@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laraspace - Vue - Documentation</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="css/prism.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body class="sidebar-default">
+<header class="site-header">
+    <a href="#" class="nav-toggle">
+        <div class="hamburger hamburger--htla">
+            <span>toggle menu</span>
+        </div>
+    </a>
+    <a href="#" class="brand-main"><img src="img/logo.png" alt="Laraspace Logo"></a>
+    <ul class="action-list">
+        <li><a href="index.html">Laravel</a></li>
+        <li class="active"><a href="vue.html">Vue</a></li>
+    </ul>
+</header>
+<div class="sidebar-left" id="main">
+    <ul class="side-nav">
+        <li><a href="#getting-started"><i class="fa fa-plane"></i> Getting Started</a></li>
+        <li><a href="#vuejs-workflow"><i class="fa fa-code"></i> VueJS Workflow</a></li>
+        <li><a href="#sass-workflow"><i class="fa fa-compress"></i> Sass Workflow</a></li>
+        <li><a href="#notifications"><i class="fa fa-bell"></i> Notifications</a></li>
+        <li><a href="#navigation"><i class="fa fa-ship"></i> Navigation</a></li>
+        <li><a href="#plugins"><i class="fa fa-rocket"></i> Plugins</a></li>
+        <li><a href="#settings-api"><i class="fa fa-cogs"></i> Settings API</a></li>
+        <li><a href="#helpers"><i class="fa fa-life-ring"></i> Helpers</a></li>
+        <li><a href="#skins"><i class="fa fa-cogs"> </i> Skins</a></li>
+    </ul>
+</div>
+<div class="mobile-menu-overlay"></div>
+<div class="main-content">
+    <section id="getting-started">
+        <h3><i class="fa fa-plane"></i> Getting Started</h3>
+        <p>Laraspace is an Admin starter template for <a href="http://laravel.com">Laravel 5.4</a> PHP Framework which
+            includes all the necessary boilerplate for your next web application.</p>
+        <h5>Requirements:</h5>
+        <p>Laraspace has the same requirements that Laravel does but we have mentioned them below anyway for your
+            reference.</p>
+        <h6>Server Requirements:</h6>
+        <ul>
+            <li>PHP >= 5.6.4</li>
+            <li>OpenSSL PHP Extension</li>
+            <li>PDO PHP Extension</li>
+            <li>Mbstring PHP Extension</li>
+            <li>Tokenizer PHP Extension</li>
+            <li>XML PHP Extension</li>
+        </ul>
+        <h6>Other Requirements:</h6>
+        <ul>
+            <li>NPM</li>
+            <li>Composer</li>
+        </ul>
+        <h5>Suggested Dev Environments:</h5>
+        <ul>
+            <li>Mac: MAMP/MAMP Pro/ <a href="https://laravel.com/docs/5.4/valet">Laravel Valet</a> (Recommended)</li>
+            <li>Windows: WAMP / Laragon (Recommended & Easier to setup)</li>
+            <li><a href="https://laravel.com/docs/5.4/homestead">Laravel Homestead</a></li>
+        </ul>
+        <h5>Installation:</h5>
+        <ol class="step-list">
+            <li>Unzip the downloaded folder.</li>
+            <li>Now, copy the Application directory to your web root</li>
+            <li>Using your preferred terminal , go to the copied folder and run the following command to set a random
+                secure Application Key <span class="highlight">php artisan key:generate</span></li>
+            <li>Open .env file in your favorite text editor and set the database credentials.</li>
+            <li><span class="highlight">php artisan migrate --seed</span> run this command for migrating & seeding the database inside your app folder.
+            </li>
+            <li>Install NPM globally if you haven't installed that already , for more information please refer this <a
+                    href="https://docs.npmjs.com/getting-started/installing-node">link</a></li>
+            <li>After installing NPM globally , run <span class="highlight">npm install</span> inside your webroot , it
+                will download all the required dependencies.
+            </li>
+            <li>You are ready to launch!</li>
+        </ol>
+    </section>
+    <section id="vuejs-workflow">
+        <h3><i class="fa fa-code"></i> Vuejs Workflow</h3>
+        <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out <span
+                class="highlight-2">webpack.mix.js</span> for underlying code.</p>
+        <p>All Laraspace VueJS files are located in <span class="highlight-2"> resources/assets/admin/js </span> folder.</p>
+        <h5>Directory & File Structure for VueJS</h5>
+        <div class="help-block">
+            <ul class="directory-list">
+            	<li><i class="fa fa-folder"></i> <span>components</span> : All the Vue Components for Dashboard</li>
+                <li><i class="fa fa-folder"></i> <span>helpers</span> : Helper Files provided by Default</li>
+                <li><i class="fa fa-folder"></i> <span>layouts</span> : All Master Layout Views</li>
+                <li><i class="fa fa-folder"></i> <span>partials</span> : Partials like Header,Footer, etc</li>
+                <li><i class="fa fa-folder"></i> <span>pages</span> : Specific Page Views </li>
+                <li><i class="fa fa-file"></i> <span>app.js</span> : Main Javascript Entry File for our App</li>
+                <li><i class="fa fa-file"></i> <span>bootstrap.js</span> :  Bootstraps all the Plugins</li>
+                <li><i class="fa fa-file"></i> <span>router.js</span> : Main Router File<li>
+            </ul>
+        </div>
+        <h5>Compiling Assets</h5>
+        <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you can use :</p>
+
+        <dl class="row">
+            <dt class="col-sm-3">npm run webpack :</dt>
+            <dd class="col-sm-9"> Compile assets without watch</dd>
+
+            <dt class="col-sm-3">npm run dev :</dt>
+            <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
+
+            <dt class="col-sm-3">npm run hmr :</dt>
+            <dd class="col-sm-9">Compile assets and watch the files with Hot-Module-Reload enabled</dd>
+
+            <dt class="col-sm-3">npm run production :</dt>
+            <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
+        </dl>
+        <p>You can read more about Laravel Mix
+            <a href="https://laravel.com/docs/5.4/mix">here</a>.</p>
+    </section>
+    <section id="sass-workflow">
+        <h3><i class="fa fa-compress"></i> Sass Workflow</h3>
+        <p>All Laraspace Sass files are located in <span class="highlight-2"> resources/assets/admin/sass </span>
+            folder. <br> note: You can remove the components which you're not gonna use inside your project to reduce
+            the filesize.</p>
+        <p>Laraspace css files compiled output location : <span class="highlight-2">public/assets/admin/css/laraspace.css</span>
+        </p>
+        <h5>Directory & File Structure for SASS</h5>
+        <div class="help-block">
+            <ul class="directory-list">
+                <li><i class="fa fa-folder"></i> <span>layouts</span> : styles for Laraspace layout
+                </li>
+                <li><i class="fa fa-folder"></i> <span>pages</span> : specific page styles
+                </li>
+                <li><i class="fa fa-folder"></i> <span>components</span> : styles for components like buttons , cards &
+                    tabs
+                </li>
+                <li><i class="fa fa-folder"></i> <span>partials</span> : styles for layout partials , i.e header ,
+                    footer & sidebar
+                </li>
+                <li><i class="fa fa-file"></i> <span>laraspace.scss</span> : main entry point of all sass files.</li>
+                <li><i class="fa fa-file"></i> <span>variables.scss</span> : main config file</li>
+                <li><i class="fa fa-file"></i> <span>base.scss</span> : base styles for Laraspace</li>
+                <li><i class="fa fa-file"></i> <span>demo.scss</span> : styles for demo , you can remove the reference
+                    to this file.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="notifications">
+        <h3><i class="fa fa-bell"></i> Notifications</h3>
+        <h5>Frontend : </h5>
+        <p>To show notifications to a user in Frontend, for example : when a user gets registered or a new post has
+            been created. You can just use following functions:
+<pre><code class="language-php">flash()->success('You have Logged in Successfully.');
+flash()->warning('Something is wrong.');
+flash()->error('Validation Error');
+flash()->info('Laraspace is Awesome!');©
+</code></pre>
+        </p>
+        <p>Laraspace uses Toastr as a default notification driver but if you wish to change then you can edit the
+            following config file : <span class="highlight-2">config/laraspace.php</span></p>
+
+        <h5>Vue Admin :</h5>
+        <p>You can use Toastr & Notie Jquery plugins included in Laraspace by default for firing Notifications in your Vue Components.  You can check the examples in <span class="highlight-2">resources/assets/admin/js/pages/components/Notifications.vue</span> file.</p>
+    </section>
+    <section id="navigation">
+        <h3><i class="fa fa-ship"></i> Navigation</h3>
+        <p>Laraspace uses <a href="https://github.com/vuejs/vue-router">Vue-Router</a> for Routing, Thus you are required to have a basic knowledge of how it works.
+        	The <span class="highlight-2">resources/assets/admin/js/router.js</span> file contains all the route definitions for the Application & Once you've defined a certain route, you can edit <span class="highlight-2">SiteSidebar.vue</span> or
+            <span class="highlight-2">SiteHeaderBottom.vue</span> Partial depending on your Layout choice to add a link in Navigation Menu.</p>
+        <p>
+            For more information about Router, see <a href="http://router.vuejs.org/">Here</a>
+        </p>
+    </section>
+    <section id="plugins">
+        <h3><i class="fa fa-rocket"></i> Plugins
+            <small>Custom JS/CSS Files</small>
+        </h3>
+        <p>All the plugins are stored in <span class="highlight-2">resources/assets/plugins</span>. You can include any
+            required plugin in your frontend or admin as they are stored on a location which can be accessed easily by
+            both.</p>
+        <p>To add a plugin into backend you can do the following:</p>
+        <ol>
+            <li>Create a directory in <span class="highlight-2">resources/assets/plugins</span> with your plugin name
+            </li>
+            <li>Add the js files into <span class="highlight-2">webpack.mix.js</span></li>
+            <li>Add the .scss file to <span class="highlight-2">resources/assets/sass/laraspace.scss</span>. <br>Note :
+                CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then you can
+                just paste the styles into your custom .scss file.
+            </li>
+            <li>run <span class="highlight">npm run webpack</span> command to merge the added JS file and compile the SASS file
+            </li>
+        </ol>
+    </section>
+    <section id="settings-api">
+        <h3><i class="fa fa-cogs"></i> Settings API</h3>
+        <p>Laraspace has site-settings built-in, thus you can use the <span class="highlight">Setting</span> Model
+            Facade to get the current settings and set new settings for your site.</p>
+        <h6>Add new Setting</h6>
+          <pre><code class="language-php">Setting::set('facebook_link','http://facebook.com/laraspace');</code></pre>
+        <h6>Get existing Setting</h6>
+          <pre><code class="language-php">Setting::get('facebook_link'); // returns "http://facebook.com/laraspace"</code></pre>
+        <p>You can also use <a href="#helpers"><span class="highlight">get_setting()</span></a> helper function to get
+            the setting value inside any of your views.</p>
+    </section>
+    <section id="helpers">
+        <h3><i class="fa fa-life-ring"></i> Helpers</h3>
+        <p>We have provided some helper functions to make your development easier.</p>
+        <h5>Vue : </h5>
+        <ul class="function-list">
+            <li>
+                <span class="function-name">Plugin.initPlugins()</span>
+                <p>This function accepts an Array of plugins which you need to Initialise in the Component.</p>
+
+                <p>List of Plugins provided by Laraspace : </p>
+                <ul>
+                    <li>EasyPieChart</li>
+                    <li>MetisMenu</li>
+                    <li>Select2</li>
+                    <li>BootstrapSelect</li>
+                    <li>SwitchToggles</li>
+                    <li>TimePickers</li>
+                    <li>MultiSelect</li>
+                    <li>DatePicker</li>
+                    <li>Editors</li>
+                </ul>
+
+                <pre><code class="language-js">
+Plugin.initPlugins(['EasyPieChart','MetisMenu']);
+                </code></pre>
+            </li>
+        </ul>
+        <h5>Laravel : </h5>
+        <ul class="function-list">
+            <li>
+                <span class="function-name">set_active()</span>
+                <p>This function returns 'active' class if the current url matches the provided pattern. It is used to
+                    set 'active' states</p>
+              <pre><code class="language-php">// Current URL is /admin/dashboard
+
+set_active('/admin') // Returns : ''</code></pre>
+                <p>You can also use wildcards:</p>
+              <pre><code class="language-php">// Current URL is /admin/dashboard
+
+set_active('/admin*') // Returns : 'active'</code></pre>
+                <p>Set another class instead of 'active'. If you want multiple classes then you can just seperate them
+                    with a space.</p>
+              <pre><code class="language-php">// Current URL is /admin/dashboard
+
+set_active('/admin/dashboard','active open') // Returns : 'active open'</code></pre>
+            </li>
+            <li>
+                <span class="function-name">get_setting()</span>
+                <p>This function returns the setting value for the provided key.</p>
+              <pre><code class="language-php">$facebook_url = get_setting('fb_url');</code></pre>
+            </li>
+            <li>
+                <span class="function-name">is_url()</span>
+                <p>This function checks if the provided pattern matches the current URL.</p>
+              <pre><code class="language-php">// Current URL is /admin/dashboard
+
+$is_dashboard = is_url('admin/dashboard'); // Returns : true</code></pre>
+            </li>
+            <li>
+                <span class="function-name">clean_slug()</span>
+                <p>This function replaces white-spaces with hyphens and removes special characters.</p>
+              <pre><code class="language-php">$post_slug = clean_slug('My Awesome Post Slug$'); //Returns : My-Awesome-Post-Slug</code></pre>
+            </li>
+        </ul>
+    </section>
+    <section id="skins">
+        <h3><i class="fa fa-cogs"></i> Skins</h3>
+        <p>Laraspace now ships with 6 different Skins : </p>
+        <ul>
+            <li>default</li>
+            <li>arryn</li>
+            <li>tyrell</li>
+            <li>targaryen</li>
+            <li>lannister</li>
+            <li>stark</li>
+        </ul>
+        <p>To change the skin of your application just add the class "skin-{skin-name}" to the <span class="highlight">&lt;body&gt;</span> tag inside <span class="highlight-2">app.blade.php</span> file.</p>
+        <p>For example : <span class="highlight">&lt;body class="skin-tyrell"&gt;</span></p>
+    </section>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/tether.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/prism.js"></script>
+</body>
+</html>

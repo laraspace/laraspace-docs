@@ -112,7 +112,7 @@ section h3 i{
 
 section h3{
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 40px;
   padding-bottom: 10px;
   border-bottom: 1px solid #333;
@@ -165,20 +165,42 @@ h6 {
   font-weight: bold;
 }
 
-.highlight ,.highlight-2{
+/*.highlight ,.highlight-2{*/
+  /*display: inline-block;*/
+  /*background-color: #ffde00;*/
+  /*line-height: 24px;*/
+  /*padding:.2rem .4rem;*/
+  /*margin: 0;*/
+  /*font-size: 16px;*/
+  /*overflow: inherit;*/
+/*}*/
+
+/*.highlight-2{*/
+  /*background-color: #f0f2f1;*/
+  /*color: #525252;*/
+  /*font-weight: bold;*/
+/*}*/
+
+ol li{
+  margin-bottom: 5px;
+}
+
+.highlight,.highlight-2{
+  color: #525252;
+  font-weight: bold;
   display: inline-block;
-  background-color: #ffde00;
   line-height: 24px;
-  padding:.2rem .4rem;
   margin: 0;
   font-size: 16px;
   overflow: inherit;
 }
 
-.highlight-2{
-  background-color: #f0f2f1;
-  color: #525252;
-  font-weight: bold;
+a .highlight {
+  color : #0275d8;
+}
+
+a .highlight:hover{
+  text-decoration: underline;
 }
 
 .upgrade-list > li{
@@ -202,7 +224,7 @@ h6 {
   padding:0;
 }
 
-.function-list li {
+.function-list > li {
   margin-bottom: 40px;
 }
 
@@ -305,6 +327,42 @@ h6 {
 .hamburger--htla.is-active span::after {
   bottom: 0;
   transform: translateX(9.5px) translateY(-1.6px) rotate(-45deg);
+}
+
+
+.action-list {
+    float: right;
+    list-style: none;
+    margin: 0;
+}
+
+.action-list li {
+    display: block;
+    float: left;
+    position: relative;
+    height: 36px;
+    margin: 0;
+    padding: 0 4px;
+}
+
+.action-list li a{
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    background-color: #333;
+    color : #fff;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 11px;
+}
+
+.action-list li a:hover{
+  background-color: #404040;
+  color: #fff;
+}
+
+.action-list li.active a{
+  color : #ffde00 !important;
 }
 
 

@@ -30,14 +30,13 @@
         <li><a href="#navigation"><i class="fa fa-ship"></i> Navigation</a></li>
         <li><a href="#components"><i class="fa fa-bell"></i> Notifications</a></li>
         <li><a href="#plugins"><i class="fa fa-rocket"></i> Plugins</a></li>
-        <li><a href="#authentication"><i class="fa fa-lock"></i> Authentication</a></li>
         <li><a href="#settings-api"><i class="fa fa-cogs"></i> Settings API</a></li>
         <li><a href="#helpers"><i class="fa fa-life-ring"></i> Helpers</a></li>
         <li><a href="#customization"><i class="fa fa-wrench"> </i> Customization</a></li>
         <li><a href="#skins"><i class="fa fa-cogs"> </i> Skins</a></li>
         <li><a href="#starter-kit"><i class="fa fa-truck"></i> Starter Kit</a></li>
         <li><a href="#social-auth"><i class="fa fa-comment"></i> Social Auth</a></li>
-        <li><a href="#change-log"><i class="fa fa-binoculars"></i> Change log</a></li>
+        <li><a href="#change-log"><i class="fa fa-binoculars"></i> Whats New</a></li>
         <li><a href="#upgrade"><i class="fa fa-plane"></i> Upgrade</a></li>
     </ul>
 </div>
@@ -99,8 +98,9 @@
             <li>Using your preferred terminal , go to the copied folder and run the following command to set a random
                 secure Application Key <span class="highlight">php artisan key:generate</span></li>
             <li>Open .env file in your favorite text editor and set the database credentials.</li>
-            <li><span class="highlight">php artisan migrate --seed</span> run this command for migrating & seeding the
-                database inside your app folder.
+            <li>Open <span class="highlight">database/seeds/UsersTableSeeder.php</span> and change the admin's email & password to your preference.</li>
+            <li><span class="highlight">php artisan migrate --seed</span> run this command to migrate & seed the
+                database. ( Make sure that you're inside the app's root directory )
             </li>
             <li>Install NPM globally if you haven't installed that already , for more information please refer this <a
                     href="https://docs.npmjs.com/getting-started/installing-node">link</a></li>
@@ -116,10 +116,10 @@
     </section>
     <section id="sass-workflow">
         <h3><i class="fa fa-compress"></i> Sass Workflow</h3>
-        <p>All Laraspace Sass files are located in <span class="highlight-2"> resources/assets/admin/sass </span>
+        <p>All Laraspace Sass files are located in <span class="highlight"> resources/assets/admin/sass </span>
             folder. <br> note: You can remove the components which you're not gonna use inside your project to reduce
             the filesize.</p>
-        <p>Laraspace css files compiled output location : <span class="highlight-2">public/assets/admin/css/laraspace.css</span>
+        <p>Laraspace css files compiled output location : <span class="highlight">public/assets/admin/css/laraspace.css</span>
         </p>
         <h5>Directory & File Structure for SASS</h5>
         <div class="help-block">
@@ -133,6 +133,8 @@
                 </li>
                 <li><i class="fa fa-folder"></i> <span>partials</span> : styles for layout partials , i.e header ,
                     footer & sidebar
+                </li>
+                <li><i class="fa fa-folder"></i> <span>skins</span> : Specific styles for all the skins
                 </li>
                 <li><i class="fa fa-file"></i> <span>laraspace.scss</span> : main entry point of all sass files.</li>
                 <li><i class="fa fa-file"></i> <span>variables.scss</span> : main config file</li>
@@ -148,10 +150,9 @@
         <p>Laraspace supports VueJS but if you don't wish to include VueJS in your project then its perfectly fine
             because its optional. If you haven't heard about VueJS then you learn more about it <a
                     href="http://vuejs.org">here</a></p>
-        <p>We have used Browserify to bundle up the VueJs files using Laravel Elixir. You can check out <span
-                class="highlight-2">gulpfile.js</span> for underlying code.</p>
-        <p>All Laraspace VueJS files are located in <span class="highlight-2"> resources/assets/admin/js </span> folder.
-        </p>
+        <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out <span
+                class="highlight">webpack.mix.js</span> for underlying code.</p>
+        <p>All Laraspace VueJS files are located in <span class="highlight"> resources/assets/admin/js </span> folder.</p>
         <h5>Directory & File Structure for VueJS</h5>
         <div class="help-block">
             <ul class="directory-list">
@@ -161,18 +162,34 @@
                 </li>
             </ul>
         </div>
+        <h5>Compiling Assets</h5>
+        <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you can use :</p>
+        <dl class="row">
+            <dt class="col-sm-3">npm run webpack :</dt>
+            <dd class="col-sm-9"> Compile assets without watch</dd>
+
+            <dt class="col-sm-3">npm run dev :</dt>
+            <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
+
+            <dt class="col-sm-3">npm run hmr :</dt>
+            <dd class="col-sm-9">Compile assets and watch the files with Hot-Module-Reload enabled</dd>
+
+            <dt class="col-sm-3">npm run production :</dt>
+            <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
+        </dl>
+        <p>You can read more about Laravel Mix <a href="https://laravel.com/docs/5.4/mix">here</a>.</p>
     </section>
     <section id="validation">
         <h3><i class="fa fa-hand-stop-o"></i> Validation</h3>
         <p>Laraspace provides an easy way to validate on client side & server side.</p>
         <h5 class="m-b-1">Client Side Validation:</h5>
-        <p>You can check <span class="highlight-2">public/assets/admin/js/pages/validation.js</span> for information on
+        <p>You can check <span class="highlight">public/assets/admin/js/pages/validation.js</span> for information on
             client side validation. You can copy the above file and edit the rules object according to your needs.</p>
         <p>To checkout all the rules available , please visit this <a
                 href="https://jqueryvalidation.org/documentation/#link-list-of-built-in-validation-methods">link</a></p>
         <h5 class="m-b-1">Server Side Validation:</h5>
         <p>Laraspace automatically shows the errors on a failed validation. All you need to do is add your validation
-            rules to the Form Request Validation File. <span class="highlight-2">laraspace-notifs.blade.php</span> is
+            rules to the Form Request Validation File. <span class="highlight">laraspace-notifs.blade.php</span> is
             the file responsible for throwing validation errors by default. If you wish to customize how the validations
             are displayed or remove them completely, then this is the file you should be looking at.</p>
     </section>
@@ -187,46 +204,32 @@ flash()->info('Laraspace is Awesome!');
 </code></pre>
         </p>
         <p>Laraspace uses Toastr as a default notification driver but if you wish to change then you can edit the
-            following config file : <span class="highlight-2">config/laraspace.php</span></p>
+            following config file : <span class="highlight">config/laraspace.php</span></p>
     </section>
     <section id="navigation">
         <h3><i class="fa fa-ship"></i> Navigation</h3>
-        <p>From version <span class="highlight">1.1</span> onwards, Laraspace uses a dynamic & easy to edit Navigation System which allows you to quickly modify the menus without touching the markup. To edit the navigation just edit the config array on file <span class="highlight-2">config/menu.php</span>
+        <p>From version <span class="highlight">1.1</span> onwards, Laraspace uses a dynamic & easy to edit Navigation System which allows you to quickly modify the menus without touching the markup. To edit the navigation just edit the config array on file <span class="highlight">config/menu.php</span>
         </p>
     </section>
     <section id="plugins">
         <h3><i class="fa fa-rocket"></i> Plugins
             <small>Custom JS/CSS Files</small>
         </h3>
-        <p>All the plugins are stored in <span class="highlight-2">resources/assets/plugins</span>. You can include any
+        <p>All the plugins are stored in <span class="highlight">resources/assets/plugins</span>. You can include any
             required plugin in your frontend or admin as they are stored on a location which can be accessed easily by
             both.</p>
         <p>To add a plugin into backend you can do the following:</p>
         <ol>
-            <li>Create a directory in <span class="highlight-2">resources/assets/plugins</span> with your plugin name
+            <li>Create a directory in <span class="highlight">resources/assets/plugins</span> with your plugin name
             </li>
-            <li>Add the js files into <span class="highlight-2">gulpfile.js</span></li>
-            <li>Add the .scss file to <span class="highlight-2">resources/assets/sass/laraspace.scss</span>. <br>Note :
+            <li>Add the js files into <span class="highlight">webpack.mix.js</span></li>
+            <li>Add the .scss file to <span class="highlight">resources/assets/admin/sass/laraspace.scss</span>. <br>Note :
                 CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then you can
                 just paste the styles into your custom .scss file.
             </li>
-            <li>run <span class="highlight">gulp</span> command to merge the added JS file and compile the SASS file
+            <li>run <span class="highlight">npm run webpack</span> command to merge the added JS files and compile the SASS files.
             </li>
         </ol>
-    </section>
-    <section id="authentication">
-        <h3><i class="fa fa-lock"></i> Authentication</h3>
-        <p>We have included the Admin Authentication by default in Laraspace. To enable Authentication , just remove the
-            comment inside <span class="highlight">routes.php</span> for Admin Middleware as you can see on line#4. Now
-            any routes inside this route-group will require Admin Authentication.
-        </p>
-          <pre class="line-numbers">
-            <code class="language-php">Route::group([
-'prefix' => 'admin',
-// 'middleware' => 'admin'
-], function () {
-    // define the routes that require admin-auth here.
-});</code></pre>
     </section>
     <section id="settings-api">
         <h3><i class="fa fa-cogs"></i> Settings API</h3>
@@ -302,7 +305,7 @@ $is_dashboard = is_url('admin/dashboard'); // Returns : true</code></pre>
     <section id="social-auth">
         <h3><i class="fa fa-comment"></i> Social Auth</h3>
         <p>Create new Developer App keys for <a href="https://developers.facebook.com/apps/">Facebook</a>, <a
-                href="https://console.developers.google.com/">Google</a>  and <a href="https://github.com/settings/applications/">Github</a> and paste the required keys in below code to <span class="highlight-2">.env</span> file</p>
+                href="https://console.developers.google.com/">Google</a>  and <a href="https://github.com/settings/applications/">Github</a> and paste the required keys in below code to <span class="highlight">.env</span> file</p>
 <pre class="line-numbers">
 <code class="language-php">FACEBOOK_CLIENT_ID=
 FACEBOOK_CLIENT_SECRET=
@@ -324,12 +327,11 @@ GITHUB_REDIRECT_URL=http://{your-app-url}/auth/github/callback
         <p>You can convert the project to Starter Kit by running this command : <span class="highlight">php artisan laraspace:clean</span>
         </p>
         <p>This command deletes the demo files from the project permanently. If you wish to exclude any particular file
-            or folder then you can do that on <span class="highlight-2">config/laraspace.php</span> file.</p>
+            or folder then you can do that on <span class="highlight">config/laraspace.php</span> file.</p>
     </section>
     <section id="change-log">
-        <h3><i class="fa fa-binoculars"></i> Change Log</h3>
+        <h3><i class="fa fa-binoculars"></i> Whats New</h3>
         <h5 class="m-b-1"><span class="highlight">Version : 1.1 </span></h5>
-        <h6>Major Changes:</h6>
         <ul>
             <li>Easy to Edit Navigation</li>
             <li>New Ecommerce Layout</li>
@@ -343,6 +345,12 @@ GITHUB_REDIRECT_URL=http://{your-app-url}/auth/github/callback
             <li>Finance Dashboard</li>
             <li>Social Authentication</li>
             <li>More Dashboard Widgets</li>
+        </ul>
+        <h5 class="m-b-1"><span class="highlight">Version : 1.3 </span></h5>
+        <ul>
+            <li>Laravel 5.4 Support</li>
+            <li>Update to Bootstrap v4.0.0-alpha.6</li>
+            <li>Vue Admin( SPA )</li>
         </ul>
     </section>
     <section id="upgrade">
@@ -370,6 +378,11 @@ GITHUB_REDIRECT_URL=http://{your-app-url}/auth/github/callback
         <h6><span class="highlight">Upgrade from Version 1.1 to 1.2 :</span></h6>
         <ul class="upgrade-list">
             <li>Read the official guide from Laravel to update from <a class="highlight" href="https://laravel.com/docs/5.3/upgrade#upgrade-5.3.0">Laravel 5.2 to 5.3</a></li>
+            <li>Follow all the steps above to update Laraspace files </li>
+        </ul>
+        <h6><span class="highlight">Upgrade from Version 1.2 to 1.3 :</span></h6>
+        <ul class="upgrade-list">
+            <li>Read the official guide from Laravel to update from <a class="highlight" href="https://laravel.com/docs/5.4/upgrade#upgrade-5.4.0">Laravel 5.3 to 5.4</a></li>
             <li>Follow all the steps above to update Laraspace files </li>
             <li>If you have any questions , you can contact us at codecanyon.</li>
         </ul>

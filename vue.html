@@ -69,6 +69,7 @@
             <li>Now, copy the Application directory to your web root</li>
             <li>Using your preferred terminal , go to the copied folder and run the following command to set a random
                 secure Application Key <span class="highlight">php artisan key:generate</span></li>
+            <li>Open <span class="highlight">database/seeds/UsersTableSeeder.php</span> and change the admin's email & password to your preference.</li>
             <li>Open .env file in your favorite text editor and set the database credentials.</li>
             <li><span class="highlight">php artisan migrate --seed</span> run this command for migrating & seeding the database inside your app folder.
             </li>
@@ -83,18 +84,17 @@
     <section id="vuejs-workflow">
         <h3><i class="fa fa-code"></i> Vuejs Workflow</h3>
         <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out <span
-                class="highlight-2">webpack.mix.js</span> for underlying code.</p>
-        <p>All Laraspace VueJS files are located in <span class="highlight-2"> resources/assets/admin/js </span> folder.</p>
+                class="highlight">webpack.mix.js</span> for underlying code.</p>
+        <p>All Laraspace VueJS files are located in <span class="highlight"> resources/assets/js </span> folder.</p>
         <h5>Directory & File Structure for VueJS</h5>
         <div class="help-block">
             <ul class="directory-list">
-            	<li><i class="fa fa-folder"></i> <span>components</span> : All the Vue Components for Dashboard</li>
-                <li><i class="fa fa-folder"></i> <span>helpers</span> : Helper Files provided by Default</li>
-                <li><i class="fa fa-folder"></i> <span>layouts</span> : All Master Layout Views</li>
-                <li><i class="fa fa-folder"></i> <span>partials</span> : Partials like Header,Footer, etc</li>
-                <li><i class="fa fa-folder"></i> <span>pages</span> : Specific Page Views </li>
-                <li><i class="fa fa-file"></i> <span>app.js</span> : Main Javascript Entry File for our App</li>
-                <li><i class="fa fa-file"></i> <span>bootstrap.js</span> :  Bootstraps all the Plugins</li>
+            	<li><i class="fa fa-folder"></i> <span>components</span> : All the Vue Components </li>
+                <li><i class="fa fa-folder"></i> <span>helpers</span> : Helper files provided by default</li>
+                <li><i class="fa fa-folder"></i> <span>services</span> : Services provided by default</li>
+                <li><i class="fa fa-folder"></i> <span>views</span> :  View components </li>
+                <li><i class="fa fa-file"></i> <span>app.js</span> : Main javascript entry file for our App</li>
+                <li><i class="fa fa-file"></i> <span>bootstrap.js</span> :  JS File to Bootstrap all the required plugins & config</li>
                 <li><i class="fa fa-file"></i> <span>router.js</span> : Main Router File<li>
             </ul>
         </div>
@@ -114,15 +114,14 @@
             <dt class="col-sm-3">npm run production :</dt>
             <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
         </dl>
-        <p>You can read more about Laravel Mix
-            <a href="https://laravel.com/docs/5.4/mix">here</a>.</p>
+        <p>You can read more about Laravel Mix <a href="https://laravel.com/docs/5.4/mix">here</a>.</p>
     </section>
     <section id="sass-workflow">
         <h3><i class="fa fa-compress"></i> Sass Workflow</h3>
-        <p>All Laraspace Sass files are located in <span class="highlight-2"> resources/assets/admin/sass </span>
+        <p>All Laraspace Sass files are located in <span class="highlight"> resources/assets/sass </span>
             folder. <br> note: You can remove the components which you're not gonna use inside your project to reduce
             the filesize.</p>
-        <p>Laraspace css files compiled output location : <span class="highlight-2">public/assets/admin/css/laraspace.css</span>
+        <p>Laraspace css files compiled output location : <span class="highlight">public/assets/css/laraspace.css</span>
         </p>
         <h5>Directory & File Structure for SASS</h5>
         <div class="help-block">
@@ -148,26 +147,13 @@
     </section>
     <section id="notifications">
         <h3><i class="fa fa-bell"></i> Notifications</h3>
-        <h5>Frontend : </h5>
-        <p>To show notifications to a user in Frontend, for example : when a user gets registered or a new post has
-            been created. You can just use following functions:
-<pre><code class="language-php">flash()->success('You have Logged in Successfully.');
-flash()->warning('Something is wrong.');
-flash()->error('Validation Error');
-flash()->info('Laraspace is Awesome!');©
-</code></pre>
-        </p>
-        <p>Laraspace uses Toastr as a default notification driver but if you wish to change then you can edit the
-            following config file : <span class="highlight-2">config/laraspace.php</span></p>
-
-        <h5>Vue Admin :</h5>
-        <p>You can use Toastr & Notie Jquery plugins included in Laraspace by default for firing Notifications in your Vue Components.  You can check the examples in <span class="highlight-2">resources/assets/admin/js/pages/components/Notifications.vue</span> file.</p>
+        <p>You can use Toastr & Notie Jquery plugins included in Laraspace by default for firing Notifications in your Vue Components.  You can check the examples in <span class="highlight">resources/assets/js/pages/components/Notifications.vue</span> file.</p>
     </section>
     <section id="navigation">
         <h3><i class="fa fa-ship"></i> Navigation</h3>
-        <p>Laraspace uses <a href="https://github.com/vuejs/vue-router">Vue-Router</a> for Routing, Thus you are required to have a basic knowledge of how it works.
-        	The <span class="highlight-2">resources/assets/admin/js/router.js</span> file contains all the route definitions for the Application & Once you've defined a certain route, you can edit <span class="highlight-2">SiteSidebar.vue</span> or
-            <span class="highlight-2">SiteHeaderBottom.vue</span> Partial depending on your Layout choice to add a link in Navigation Menu.</p>
+        <p>Laraspace uses <a href="https://github.com/vuejs/vue-router">Vue-Router</a> for Routing, Thus you are required to have a basic knowledge of how it works.</p>
+        	<p>The <span class="highlight">resources/assets/js/router.js</span> file contains all the route definitions for the Application & once you've defined a certain route, you can edit <span class="highlight">SiteSidebar.vue</span> or
+            <span class="highlight">SiteHeaderBottom.vue</span> Partial depending on your Layout choice to add a link in Navigation Menu.</p>
         <p>
             For more information about Router, see <a href="http://router.vuejs.org/">Here</a>
         </p>
@@ -176,19 +162,19 @@ flash()->info('Laraspace is Awesome!');©
         <h3><i class="fa fa-rocket"></i> Plugins
             <small>Custom JS/CSS Files</small>
         </h3>
-        <p>All the plugins are stored in <span class="highlight-2">resources/assets/plugins</span>. You can include any
+        <p>All the plugins are stored in <span class="highlight">resources/assets/plugins</span>. You can include any
             required plugin in your frontend or admin as they are stored on a location which can be accessed easily by
             both.</p>
         <p>To add a plugin into backend you can do the following:</p>
         <ol>
-            <li>Create a directory in <span class="highlight-2">resources/assets/plugins</span> with your plugin name
+            <li>Create a directory in <span class="highlight">resources/assets/plugins</span> with your plugin name
             </li>
-            <li>Add the js files into <span class="highlight-2">webpack.mix.js</span></li>
-            <li>Add the .scss file to <span class="highlight-2">resources/assets/sass/laraspace.scss</span>. <br>Note :
+            <li>Add the js files into <span class="highlight">webpack.mix.js</span></li>
+            <li>Add the .scss file to <span class="highlight">resources/assets/sass/laraspace.scss</span>. <br>Note :
                 CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then you can
                 just paste the styles into your custom .scss file.
             </li>
-            <li>run <span class="highlight">npm run webpack</span> command to merge the added JS file and compile the SASS file
+            <li>run <span class="highlight">npm run webpack</span> command to merge the added JS files and compile the SASS files.
             </li>
         </ol>
     </section>
@@ -279,7 +265,7 @@ $is_dashboard = is_url('admin/dashboard'); // Returns : true</code></pre>
             <li>lannister</li>
             <li>stark</li>
         </ul>
-        <p>To change the skin of your application just add the class "skin-{skin-name}" to the <span class="highlight">&lt;body&gt;</span> tag inside <span class="highlight-2">app.blade.php</span> file.</p>
+        <p>To change the skin of your application just add the class "skin-{skin-name}" to the <span class="highlight">&lt;body&gt;</span> tag inside <span class="highlight">app.blade.php</span> file.</p>
         <p>For example : <span class="highlight">&lt;body class="skin-tyrell"&gt;</span></p>
     </section>
 </div>

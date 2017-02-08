@@ -106,16 +106,16 @@ section {
 }
 
 section h3 i{
-  width: 50px;
+  width: 35px;
   color: #ffde00;
 }
 
 section h3{
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 30px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #d9d9d9;
   color: #333;
 }
 

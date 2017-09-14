@@ -19,6 +19,7 @@
     <ul class="action-list">
         <li><a href="index.html">Laravel</a></li>
         <li class="active"><a href="vue.html">Vue</a></li>
+        <li><a href="html.html">HTML</a></li>
     </ul>
 </header>
 <div class="sidebar-left" id="main">
@@ -32,6 +33,7 @@
         <li><a href="#settings-api"><i class="fa fa-cogs"></i> Settings API</a></li>
         <li><a href="#helpers"><i class="fa fa-life-ring"></i> Helpers</a></li>
         <li><a href="#skins"><i class="fa fa-cogs"> </i> Skins</a></li>
+        <li><a href="#upgrade"><i class="fa fa-plane"></i> Upgrade</a></li>
     </ul>
 </div>
 <div class="mobile-menu-overlay"></div>
@@ -102,13 +104,13 @@
         <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you can use :</p>
 
         <dl class="row">
-            <dt class="col-sm-3">npm run webpack :</dt>
+            <dt class="col-sm-3">npm run dev :</dt>
             <dd class="col-sm-9"> Compile assets without watch</dd>
 
-            <dt class="col-sm-3">npm run dev :</dt>
+            <dt class="col-sm-3">npm run watch :</dt>
             <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
 
-            <dt class="col-sm-3">npm run hmr :</dt>
+            <dt class="col-sm-3">npm run hot :</dt>
             <dd class="col-sm-9">Compile assets and watch the files with Hot-Module-Reload enabled</dd>
 
             <dt class="col-sm-3">npm run production :</dt>
@@ -267,6 +269,25 @@ $is_dashboard = is_url('admin/dashboard'); // Returns : true</code></pre>
         </ul>
         <p>To change the skin of your application just add the class "skin-{skin-name}" to the <span class="highlight">&lt;body&gt;</span> tag inside <span class="highlight">app.blade.php</span> file.</p>
         <p>For example : <span class="highlight">&lt;body class="skin-tyrell"&gt;</span></p>
+    </section>
+    <section id="upgrade">
+        <h3><i class="fa fa-plane"></i> Upgrade</h3>
+        <p>You can follow the steps below to upgrade laraspace:</p>
+        <h6><span class="highlight">Upgrade from Version 1.3 to 1.3.1 :</span></h6>
+        <ul class="upgrade-list">
+            <li>Take a backup of your project.</li>
+            <li>Replace the below files from the new project
+                <ul>
+                    <li>package.json</li>
+                    <li>webpack.mix.js</li>
+                    <li>resources/views/app.blade.php</li>
+                    <li>app/space/helpers.php</li>
+                </ul>
+            </li>
+            <li>Delete <span class="highlight">webpack.config.js</span></li>
+            <li>run commands <span class="highlight">npm prune</span> then <span class="highlight">npm install</span></li>
+            <li>If you have any questions, you can contact us at codecanyon.</li>
+        </ul>
     </section>
 </div>
 <script src="js/jquery.js"></script>

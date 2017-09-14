@@ -19,6 +19,7 @@
     <ul class="action-list">
         <li class="active"><a href="index.html">Laravel</a></li>
         <li><a href="vue.html">Vue</a></li>
+        <li><a href="html.html">HTML</a></li>
     </ul>
 </header>
 <div class="sidebar-left" id="main">
@@ -61,7 +62,7 @@
         <h6>Optional Requirements:</h6>
         <ul>
             <li>Composer</li>
-            <li>NPM</li>
+            <li>NPM / YARN</li>
         </ul>
         <h5>Suggested Dev Environments:</h5>
         <ul>
@@ -165,13 +166,13 @@
         <h5>Compiling Assets</h5>
         <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you can use :</p>
         <dl class="row">
-            <dt class="col-sm-3">npm run webpack :</dt>
+            <dt class="col-sm-3">npm run dev :</dt>
             <dd class="col-sm-9"> Compile assets without watch</dd>
 
-            <dt class="col-sm-3">npm run dev :</dt>
+            <dt class="col-sm-3">npm run watch :</dt>
             <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
 
-            <dt class="col-sm-3">npm run hmr :</dt>
+            <dt class="col-sm-3">npm run hot :</dt>
             <dd class="col-sm-9">Compile assets and watch the files with Hot-Module-Reload enabled</dd>
 
             <dt class="col-sm-3">npm run production :</dt>
@@ -352,6 +353,22 @@ GITHUB_REDIRECT_URL=http://{your-app-url}/auth/github/callback
             <li>Update to Bootstrap v4.0.0-alpha.6</li>
             <li>Vue Admin( SPA )</li>
         </ul>
+        <h5 class="m-b-1"><span class="highlight">Version : 1.3.1 </span></h5>
+        <ul>
+            <li>Updated Laravel Mix & fixed issues with versioning and HOT</li>
+        </ul>
+        <h5 class="m-b-1"><span class="highlight">Version : 1.4 </span></h5>
+        <ul>
+            <li>New Components : Nestable List, Nestable Tree, Image Cropper, Image Zoom, Calendar and Ratings</li>
+            <li>5 Icon Sets : IcoMoon, Evil Icons , Mateo Icons, Line Icons & FPS Line Icons</li>
+            <li>4 Charts: AM Charts, Sparkline, Morris and Gauges</li>
+            <li>2 Form Wizards</li>
+            <li>2 more Login & Register pages</li>
+            <li>Gallery Pages</li>
+            <li>3-Level Menu Support</li>
+            <li>.env file Editor</li>
+            <li>Mail Driver Settings</li>
+        </ul>
     </section>
     <section id="upgrade">
         <h3><i class="fa fa-plane"></i> Upgrade</h3>
@@ -385,6 +402,24 @@ GITHUB_REDIRECT_URL=http://{your-app-url}/auth/github/callback
             <li>Read the official guide from Laravel to update from <a class="highlight" href="https://laravel.com/docs/5.4/upgrade#upgrade-5.4.0">Laravel 5.3 to 5.4</a></li>
             <li>Follow all the steps above to update Laraspace files </li>
             <li>If you have any questions , you can contact us at codecanyon.</li>
+        </ul>
+        <h6><span class="highlight">Upgrade from Version 1.3 to 1.3.1 :</span></h6>
+        <ul class="upgrade-list">
+            <li>Take a backup of your project.</li>
+            <li>Replace the below files from the new project
+                <ul>
+                    <li>package.json</li>
+                    <li>webpack.mix.js</li>
+                </ul>
+            </li>
+            <li>Delete <span class="highlight">webpack.config.js</span></li>
+            <li>run commands <span class="highlight">npm prune</span> then <span class="highlight">npm install</span></li>
+            <li>If you have any questions, you can contact us at codecanyon.</li>
+        </ul>
+        <h6><span class="highlight">Upgrade from Version 1.3.1 to 1.4 :</span></h6>
+        <ul class="upgrade-list">
+            <li>This update contains a lot of new components and changes thus we suggest you to start with a fresh 1.4 project and copy over your modifications as needed.</li>
+            <li>If you have any questions, you can contact us at codecanyon.</li>
         </ul>
     </section>
 </div>

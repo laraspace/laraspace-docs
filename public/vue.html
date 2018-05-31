@@ -28,6 +28,9 @@
         <li><a href="#vuejs-workflow"><i class="fa fa-code"></i> VueJS Workflow</a></li>
         <li><a href="#sass-workflow"><i class="fa fa-compress"></i> Sass Workflow</a></li>
         <li><a href="#notifications"><i class="fa fa-bell"></i> Notifications</a></li>
+        <li><a href="#components"><i class="fa fa-puzzle-piece"></i> Components</a></li>
+        <li><a href="#forms"><i class="fa fa-rocket"></i> Forms</a></li>
+        
         <li><a href="#navigation"><i class="fa fa-ship"></i> Navigation</a></li>
         <li><a href="#plugins"><i class="fa fa-rocket"></i> Plugins</a></li>
         <li><a href="#settings-api"><i class="fa fa-cogs"></i> Settings API</a></li>
@@ -40,7 +43,7 @@
 <div class="main-content">
     <section id="getting-started">
         <h3><i class="fa fa-plane"></i> Getting Started</h3>
-        <p>Laraspace is an Admin starter template for <a href="http://laravel.com">Laravel 5.4</a> PHP Framework which
+        <p>Laraspace is an Admin starter template for <a href="http://laravel.com">Laravel 5.6</a> PHP Framework which
             includes all the necessary boilerplate for your next web application.</p>
         <h5>Requirements:</h5>
         <p>Laraspace has the same requirements that Laravel does but we have mentioned them below anyway for your
@@ -91,7 +94,7 @@
         <h5>Directory & File Structure for VueJS</h5>
         <div class="help-block">
             <ul class="directory-list">
-            	<li><i class="fa fa-folder"></i> <span>components</span> : All the Vue Components </li>
+            	<li><i class="fa fa-folder"></i> <span>components</span> : Global Components </li>
                 <li><i class="fa fa-folder"></i> <span>helpers</span> : Helper files provided by default</li>
                 <li><i class="fa fa-folder"></i> <span>services</span> : Services provided by default</li>
                 <li><i class="fa fa-folder"></i> <span>views</span> :  View components </li>
@@ -151,15 +154,433 @@
         <h3><i class="fa fa-bell"></i> Notifications</h3>
         <p>You can use Toastr & Notie Jquery plugins included in Laraspace by default for firing Notifications in your Vue Components.  You can check the examples in <span class="highlight">resources/assets/js/pages/components/Notifications.vue</span> file.</p>
     </section>
+    <section id="components">
+        <h3><i class="fa fa-puzzle-piece"></i> Components</h3>
+        <p>Laraspace comes with many usefull components which you can use in your project directly by just importing it on page where you want to use. The Following number of Components are included with Laraspace. </p>
+        <h6>Components:</h6>
+        <ul>
+            <li>Collapse</li>
+            <li>DropDown</li>
+            <li>SweetModal</li>
+            <li>Vue Carousel</li>
+            <li>Vue Dropzone</li>
+            <li>Vue DataTables</li>
+            <li>Vue Tabs</li>
+            <li>Vue Tooltips</li>
+        </ul>
+        <p>Here is the detail description about how to use each component, we also provide you source link with it so you can get more details for particular component.</p>
+        <h5>Collapse: </h5>
+        <div class="help-block">
+<p>Laraspace
+    <code class="highlight">&lt;v-collapse&gt; </code>and
+    <code class="highlight">&lt;v-collapse-item&gt;</code> component is use when you want to content area which can be collapsed and expanded. It also support for making accordions.</p>
+<p>This both component is globally imported in
+    <span class="highlight"> resources/assets/js/bootstrap.js</span>. and component file is stored in <span class="highlight">resources/assets/js/components/collapse/VCollapse.vue and VCollapseItem.vue</span></p>
+<p>
+    <pre><code class="language-js">import VCollapse from './components/collapse/VCollapse'</code><br><code class="language-js">import VCollapseItem from './components/collapse/VCollapseItem'</code></pre>
+</p>
+<h4>Vue Structure</h4>
+<p>
+    <pre><code class="language-html"> &lt;v-collapse&gt;
+    &lt;v-collapse-item&gt;
+        &lt;!-- content which you want in your collapse item--&gt;
+    &lt;/v-collapse-item&gt;
+ &lt;/v-collapse&gt;</code></pre>
+</p>
+<h4>API:</h4>
+<span class="highlight">VCollapse</span>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Properties</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">accordion</th>
+            <td>Accordion Props Allows you only one panel can be expanded at a time</td>
+            <td>Boolean</td>
+            <td>false</td>
+        </tr>
+    </tbody>
+</table>
+<span class="highlight">VCollapseItem</span>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Properties</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">active-url</th>
+            <td>ActiveUrl Props Allows you to set url as Active.</td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">isActive</th>
+            <td>IsActive Prpos use to set Active Collapse Item.</td>
+            <td>Boolean</td>
+            <td>false</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+        <h5>DropDown: </h5>
+        <div class="help-block">
+        <p>A dropdown is a toggleable menu that allows you to select one Item from a predefined list.</p>
+        <p>This component is also globally imported in <span class="highlight"> resources/assets/js/bootstrap.js</span>and component file is stored in
+        <span class="highlight">resources/assets/js/components/dropdown/VDropdown and VDropdownItem.vue</span>
+        </p>
+        <p>
+            <pre><code class="language-js">import VDropdown from './components/dropdown/VDropdown'</code><br><code class="language-js">import VDropdownItem from './components/dropdown/VDropdownItem'</code></pre>
+        </p>
+        <p>VDropdown is used for Display dropdown box and VDropdownItem is used for display items of dropdown menu. 
+        </p>
+        <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">&lt;v-dropdown&gt;
+    &lt;button type="button" slot="activator" /&gt; &lt;!-- you can use anything here.--&gt;
+
+    &lt;v-dropdown-item&gt; 
+       Item 1 &lt;!-- Anything you write here is the item of dropdown.--&gt;
+    &lt;/v-dropdown-item&gt;
+
+    &lt;v-dropdown-item&gt;
+       &lt;a href="index.vue" &gt;Index &lt;/a &gt;
+    &lt;/v-dropdown-item&gt;
+&lt;/v-dropdown&gt;</code></pre>
+        </p>
+        <h4>API:</h4>
+        <span class="highlight">VDropdown</span>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Properties</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">active-url</th>
+                    <td>Active Url Props Allows you to add active class on specific url.</td>
+                    <td>String</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th scope="row">toggle-arrow</th>
+                    <td>Toggle Arrow Props Allows you to Show/Hide Arrow on right side of dropdown.</td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <th scope="row">dropdown-light</th>
+                    <td>Dropdown Light Props Allows you set light background of dropdown.</td>
+                    <td>Boolean</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <th scope="row">auto-close</th>
+                    <td>Auto Close Props Allows you to close dropdown after item selected.</td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <h5>SweetModal: </h5>
+        <div class="help-block">
+            <p>sweetmodal is included in package.json file so when you install npm or yarn its automaticaly installed so you just need to import following component in your vue file and you are done!</p>
+            <p><pre><code class="language-php">import { SweetModal, SweetModalTab } from 'sweet-modal-vue'</code></pre></p>
+            <p> SweetModal is Use For simple moadal without any tabs. </p>
+            <p> SweetModalTab is For Modal with tabs in which you can provied multiple data with the use of tabs. For more information about SweetModal, see
+            <a href="https://github.com/adeptoas/sweet-modal-vue" target="_">Here</a> </p>
+        </div>
+        <h5>Vue Carousel: </h5>
+        <div class="help-block">
+        <p>For use VueCarousel you have to import it on that page where you want to use, you can also import it globally if you want to use it through out the Laraspace.</p>
+        <p>VueCarousel component file is stored in this <span class="highlight">resources/assets/js/views/admin/components/VueCarousel.vue</span> and its scss file is store in <span class="highlight">resources/assets/sass/components/vue-carousel.scss</span>path. </p>
+        <p> For Local Use:</p>
+        <p><pre><code class="language-php">import { Carousel, Slide } from 'vue-carousel';</code></pre></p>
+        <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">&lt;carousel&gt;
+    &lt;slide&gt;
+     &lt;!-- Slide 1 Content --&gt;
+    &lt;/slide&gt;
+    &lt;slide&gt;
+     &lt;!--   Slide 2 Content --&gt;
+    &lt;/slide&gt;
+&lt;/carousel&gt;</code></pre>
+        </p>
+         <p>For more information about VueCarousel, see
+        <a href="https://ssense.github.io/vue-carousel/api/" target="_">Here</a>
+        </p>
+        </div>
+        <h5>Vue Dropzone: </h5>
+        <div class="help-block">
+        <p>VueDropzone provides drag and drop file uploads with image previews. </p>
+        <p>VueDropzone component file is stored in this <span class="highlight">resources/assets/js/views/admin/components/VueDropzone.vue</span> and its scss file is stored in <span class="highlight">resources/assets/sass/components/vue-carousel.scss</span></p>
+        <p> For Local Use:</p>
+        <p>
+            <pre><code class="language-js">import vue2Dropzone from 'vue2-dropzone'</code><br><code class="language-js">import 'vue2-dropzone/dist/vue2Dropzone.css'</code></pre>
+        </p>
+        <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">&lt;vue-dropzone  id="dropzone" :options="dropzoneOptions" ref="myVueDropzone"&gt;&lt;/vue-dropzone&gt;</code></pre>
+<h4>Vue Structure</h4>
+<pre>
+<code class="language-javascript">export default { 
+  name: 'app',
+  components: {
+    vueDropzone: vue2Dropzone
+  },
+  data: function () { 
+    return { 
+      dropzoneOptions: {
+        url: 'https://httpbin.org/post',
+        thumbnailWidth: 150,
+        maxFilesize: 0.5,
+        headers: { "My-Awesome-Header": "header value" }
+      }
+    }
+  }
+}
+</code>
+</pre>
+         <p>For more information about VueDropzone, see
+        <a href="https://ssense.github.io/vue-carousel/api/" target="_">Here</a>
+        </p>
+        </div>
+
+        <h5>Vue DataTables: </h5>
+        <div class="help-block">
+        <p>Vue DataTables component allows you to render a filterable and sortable table. It is very lightweight and easy
+        to use. It has support for retrieving data asynchronously and pagination.</p>
+        <p>Vue Datatables component file is stored in this <span class="highlight">resources/assets/js/views/admin/components/VueTables.vue</span> and its scss file is stored in <span class="highlight">resources/assets/sass/components/tables.scss</span></p>
+        <p> For Local Use:</p>
+        <p>
+            <pre><code class="language-js">import { TableComponent, TableColumn } from 'vue-table-component';</code></pre>
+        </p>
+        <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">&lt;table-component 
+  :data="getUsers"
+  sort-by="row.name"
+  sort-order="desc"
+  table-class="table"&gt;
+  &lt;table-column show="firstName" label="First name"&gt;&lt;/table-column&gt;
+&lt;/table-component&gt;</code></pre>
+
+         <p>For more information about Vue Datatables, see
+        <a href="https://github.com/spatie/vue-table-component" target="_">Here</a>
+        </p>
+        </div>
+
+        <h5>Vue Tabs: </h5>
+        <div class="help-block">
+        <p>We Use vue tabs component and modified its css to same as our laraspace theme, you can use default vue tabs by removing its scss from laraspace.scss file or also modify its scss file for your customize view.
+         </p>
+        <p>Vue Tabs component file is stored in this <span class="highlight">resources/assets/js/views/admin/components/VueTabs.vue</span> and its scss file is stored in <span class="highlight">resources/assets/sass/components/vue-tabs.scss</span></p>
+        <p>Horizontal Tabs Custom classes
+            <ul >
+                <li>.tabs-default</li>
+                <li>.tabs-default.primary</li>
+                <li>.tabs-simple</li>
+            </ul>
+        <p>Vertical Tabs Custom classes</p>
+            <ul>
+                <li>.tabs-vertical</li>
+                <li>.tabs-vertical.primary</li>
+                <li>.tabs-simple-vertical</li>
+            </ul>
+            <p>Just Add class in tabs component tag and you are done with vue tabs.</p>
+        <p> For Local Use:</p>
+        <p>
+            <pre><code class="language-js">import { Tabs, Tab } from 'vue-tabs-component'</code></pre>
+        </p>
+        <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">&lt;tabs class="tabs-default"&gt;
+  &lt;tab  name="tab1"&gt;
+     &lt;!-- Your content --&gt;
+  &lt;/tab&gt;
+  &lt;tab  name="tab2"&gt;
+     &lt;!-- Your content --&gt;
+  &lt;/tab&gt;
+  &lt;tab  name="tab3"&gt;
+     &lt;!-- Your content --&gt;
+  &lt;/tab&gt;
+&lt;/tabs&gt;</code></pre>
+
+         <p>For more information about Vue Tabs, see
+        <a href="https://github.com/spatie/vue-tabs-component" target="_">Here</a>
+        </p>
+        </div>
+
+        <h5>Vue Tooltips: </h5>
+        <div class="help-block">
+        <p>v-tooltip component allows you to create tooltips, popovers or all kinds of dropdowns.
+         </p>
+        <p>VueTooltip component file is stored in this <span class="highlight">resources/assets/js/views/admin/components/VueTooltips.vue</span> and its scss file is stored in <span class="highlight">/resources/assets/sass/components/tooltips.scss</span></p>
+        <p>Laraspace alreday imported globally in <span class="highlight">/resources/assets/js/bootstrap.js</span>, so you can easly use it throught the laraspace</p>
+        <p>Globally Used:</p>
+        <p>
+            <pre><code class="language-js">import VTooltip from 'v-tooltip'</code></pre>
+        </p>
+        <h4>Vue Structure</h4>
+        <p>Use the v-tooltip directive:</p>
+        <p><pre><code class="language-html">&lt;button v-tooltip="'You have ' + count + ' new messages.'"&gt;&lt;/button&gt;</code></pre>
+        <p>Use the v-popover component:</p>
+        <p><pre><code class="language-html">&lt;v-popover&gt;
+     &lt;!-- This will be the popover target (for the events and position) --&gt;
+  &lt;button&gt;Click me &lt;/button&gt;
+     &lt;!--  This will be the content of the popover --&gt;
+  &lt;MyAwesomeComponent slot="popover"&gt;
+&lt;/v-popover&gt;</code></pre>
+
+         <p>For more information about Vue Tooltips, see
+        <a href="https://github.com/Akryum/v-tooltip" target="_">Here</a>
+        </p>
+        </div>
+    </section>
+    <section id="forms">
+        <h3><i class="fa fa-rocket"></i> Forms</h3>
+        <p>Laraspace provides advanced elements which you can use with your form.The following number of components is included with advanced form elements: </p>
+        <ul>
+            <li>Vue MultiSelect</li>
+            <li>Vue TextMask</li>
+            <li>Vue DatePicker</li>
+            <li>Vue ColorPicker</li>
+            <li>Vuelidate Validation</li>
+        </ul>
+        <p>Here is the detail description about how to use each component, we also provide you source link with it so you can get more
+            details for particular component.</p>
+        
+        <h5>Vue MultiSelect: </h5>
+        <div class="help-block">
+            <p>Multiselect is Probably the most complete selecting solution for Vue.js, without jQuery. you can use it by import it into your vue file.</p>
+            <p>
+                <pre><code class="language-php">import Multiselect from 'vue-multiselect' &#13;import 'vue-multiselect/dist/vue-multiselect.min.css'</code></pre>
+            </p>
+            <p>Vue multiselect demo file is stored in <span class="highlight">resources/assets/js/views/admin/forms/advanced-elements/MultiSelectDemo.vue</span> and scss file is stored in <span class="highlight">resources/assets/sass/components/vue-multi-select.scss</span>.</p>
+            <p>
+            <h4>Vue Structure</h4>
+            <p><pre><code class="language-html">&lt;multiselect
+  v-model="selected"
+  :options="MultiOptions"
+  :multiple="true"&gt;
+&lt;/multiselect&gt;
+            </code></pre> </p>
+            <p> For more information about VueMultiselect, see<a href="https://github.com/adeptoas/sweet-modal-vue" target="_">Here</a></p>
+        </div>
+
+        <h5>Vue TextMask: </h5>
+        <div class="help-block">
+            <p>Text Mask is an input mask which can create input masks for phone, date, currency, zip code, percentage, email, and
+            literally anything! you just need to import it from node module into your vue file.</p>
+            <p>Vue TextMask demo file is stored in
+                <span class="highlight">resources/assets/js/views/admin/forms/advanced-elements/TextMaskDemo.vue</span>.</p>
+            
+            <p>
+                <pre><code class="language-php">import MaskedInput from 'vue-text-mask' &#13;import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'</code></pre>
+            </p>
+            <p> For more information about Vue TextMask, see<a href="https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme" target="_"> Here</a></p>
+        </div>
+
+        <h5>Vue DatePicker: </h5>
+        <div class="help-block">
+            <p>Text Mask is an input mask which can create input masks for phone, date, currency, zip code, percentage, email, and
+            literally anything! you just need to import it from node module into your vue file.</p>
+            <p>
+                <pre><code class="language-javascript">import Datepicker from 'vuejs-datepicker'</code></pre>
+            </p>
+            <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">&lt;datepicker placeholder="Select Date"&gt;&lt;/datepicker&gt;
+                    </code></pre> </p>
+            <p> For more information about Vue TextMask, see<a href="https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme" target="_"> Here</a></p>
+        </div>
+
+        <h5>Vue ColorPicker: </h5>
+        <div class="help-block">
+            <p>Vue ColorPickers for Sketch, Photoshop, Chrome & more with Vue.js you just need to import it from node module into your vue file.</p>
+            <p>Here, for demo purpose we import all this ColorPicker in one file, if you want particular ColorPicker you have to import that one only.</p>
+            <p>
+                <pre><code class="language-javascript">import { Grayscale, Photoshop, Material, Compact, Swatches, Slider, Chrome, Sketch } from 'vue-color'</code></pre>
+            </p>
+            <h4>Vue Structure</h4>
+        <p><pre><code class="language-html">
+&lt;!-- suppose you have the data 'colors' in your component --&gt;
+&lt;material-picker v-model="colors" /&gt;
+&lt;compact-picker v-model="colors" /&gt;
+&lt;swatches-picker v-model="colors" /&gt;
+&lt;slider-picker v-model="colors" /&gt;
+&lt;sketch-picker v-model="colors" /&gt;
+&lt;chrome-picker v-model="colors" /&gt;
+&lt;photoshop-picker v-model="colors" /&gt;
+            </code></pre> </p>
+            <p> For more information about Vue ColorPicker, see<a href="https://github.com/xiaokaike/vue-color" target="_"> Here</a></p>
+        </div>
+
+        <h5>Vuelidate Validation: </h5>
+        <div class="help-block">
+            <p>Vuelidate is used for Validation your form, Laraspace use this Validation throught admin panel so it is imported globally in bootstrap.js file so you can use it directly throught the laraspace.</p>
+            <p>Globally use:</p>
+            <p>
+                <pre><code class="language-javascript">import Vue from 'vue'&#13;import VeeValidate from 'vee-validate';&#13;Vue.use(Vuelidate)</code></pre>
+            </p>
+            <h4>Vue Structure</h4>
+        <p><pre><code class="language-javascript">import { required, minLength, between } from 'vuelidate/lib/validators'
+export default {
+  data() { 
+      return {
+           name: '',
+           age: 0 
+      }
+    },
+    validations: { 
+        name: { 
+            required,
+            minLength: minLength(4) 
+        },
+        age:{
+            between: between(20, 30)
+        }
+    }
+}
+            </code></pre> </p>
+            <p> For more information about Vuelidate, see<a href="https://monterail.github.io/vuelidate/#sub-basic-form" target="_"> Here</a></p>
+        </div>
+       
+        <h5>VeeValidate: </h5>
+        <div class="help-block">
+            <p>VeeValidate is a validation library for Vue.js. It has plenty of validation rules and support for custom ones
+            as well. It is template based so it is similar and familiar with the HTML5 validation API. You can validate HTML5 inputs
+            as well as custom Vue components.</p>
+            <p>Globally use:</p>
+            <p>
+                <pre><code class="language-javascript">import Vue from 'vue'&#13;import Vuelidate from 'vuelidate'&#13;Vue.use(Vuelidate)</code></pre>
+            </p>
+            <p> For more information about VeeValidate, see<a href="https://baianat.github.io/vee-validate/" target="_"> Here</a></p>
+        </div>
+       
+
+    </section>
     <section id="navigation">
         <h3><i class="fa fa-ship"></i> Navigation</h3>
         <p>Laraspace uses <a href="https://github.com/vuejs/vue-router">Vue-Router</a> for Routing, Thus you are required to have a basic knowledge of how it works.</p>
         	<p>The <span class="highlight">resources/assets/js/router.js</span> file contains all the route definitions for the Application & once you've defined a certain route, you can edit <span class="highlight">SiteSidebar.vue</span> or
             <span class="highlight">SiteHeaderBottom.vue</span> Partial depending on your Layout choice to add a link in Navigation Menu.</p>
         <p>
-            For more information about Router, see <a href="http://router.vuejs.org/">Here</a>
+            For more information about Router, see <a href="http://router.vuejs.org/"> Here</a>
         </p>
+
     </section>
+    
     <section id="plugins">
         <h3><i class="fa fa-rocket"></i> Plugins
             <small>Custom JS/CSS Files</small>
@@ -193,29 +614,44 @@
     </section>
     <section id="helpers">
         <h3><i class="fa fa-life-ring"></i> Helpers</h3>
-        <p>We have provided some helper functions to make your development easier.</p>
-        <h5>Vue : </h5>
+        <h5>Vue:</h5>
+        <p>We have provided some helper functions in <span class="highlight">resources/assets/js/helpers/utilities.js</span> file to make your development easier.</p>
         <ul class="function-list">
             <li>
-                <span class="function-name">Plugin.initPlugins()</span>
-                <p>This function accepts an Array of plugins which you need to Initialise in the Component.</p>
-
-                <p>List of Plugins provided by Laraspace : </p>
-                <ul>
-                    <li>EasyPieChart</li>
-                    <li>MetisMenu</li>
-                    <li>Select2</li>
-                    <li>BootstrapSelect</li>
-                    <li>SwitchToggles</li>
-                    <li>TimePickers</li>
-                    <li>MultiSelect</li>
-                    <li>DatePicker</li>
-                    <li>Editors</li>
-                </ul>
-
-                <pre><code class="language-js">
-Plugin.initPlugins(['EasyPieChart','MetisMenu']);
-                </code></pre>
+                <span class="function-name">setLayout()</span>
+                <p>This function can be use for Setting Layout for Laraspace. Like, Laraspace come with 3 Layout style so if you need to Change Layout use This: </p>
+                <pre><code class="language-js">this.$utils.setLayout('icon-sidebar')</code></pre>
+                <p>you can pass layout name as perameter in this function like(default , icon-sidebar & horizontal)</p>
+            </li>
+            <li>
+                <span class="function-name">setSkin()</span>
+                <p>This function can be use for Setting Skin for Laraspace. Like, Laraspace come with 6 Skin style so if you need to Change Skin use This: </p>
+                <pre><code class="language-js">this.$utils.setSkin('tyrell')</code></pre>
+                <p>you can pass skin name as perameter in this function like(default , tyrell , arryn , lannister , stark & targaryen)</p>
+            </li>
+            <li>
+                <span class="function-name">setLogo()</span>
+                <p>This function can be use for Setting Laraspace Logo.if you need to Change Logo use This: </p>
+                <pre><code class="language-js">this.$utils.setLogo('/assets/img/logo_white.png')</code></pre>
+                <p>you can pass path as perameter in this function.</p>
+            </li>
+            <li>
+                <span class="function-name">addClass()</span>
+                <p>This function can be use for adding class to any element using vueJs. if you need to addClass use This: </p>
+                <pre><code class="language-js">addClass('is-invalid')</code></pre>
+                <p>you can pass class name as perameter in this function.</p>
+            </li>
+            <li>
+                <span class="function-name">hasClass()</span>
+                <p>This function can be use for checking class if that element have same class as perameter than its return ture. if you need to Check use This: </p>
+                <pre><code class="language-js">hasClass('is-invalid')</code></pre>
+                <p>you can pass class name as perameter in this function.</p>
+            </li>
+            <li>
+                <span class="function-name">reset()</span>
+                <p>This function can be use for reset or remove class if that element have same class as perameter than its remove that calss. if you need to remove class use This: </p>
+                <pre><code class="language-js">reset('layout-') // it will remove all layout class form laraspace.</code></pre>
+                <p>you can pass class name as perameter in this function.</p>
             </li>
         </ul>
         <h5>Laravel : </h5>

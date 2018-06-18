@@ -32,12 +32,12 @@
         <li><a href="#notifications"><i class="fa fa-bell"></i> Notifications</a></li>
         <li><a href="#components"><i class="fa fa-puzzle-piece"></i> Components</a></li>
         <li><a href="#forms"><i class="fa fa-rocket"></i> Forms</a></li>
-
         <li><a href="#navigation"><i class="fa fa-ship"></i> Navigation</a></li>
         <li><a href="#plugins"><i class="fa fa-rocket"></i> Plugins</a></li>
         <li><a href="#settings-api"><i class="fa fa-cogs"></i> Settings API</a></li>
         <li><a href="#helpers"><i class="fa fa-life-ring"></i> Helpers</a></li>
         <li><a href="#skins"><i class="fa fa-cogs"> </i> Skins</a></li>
+        <li><a href="#change-log"><i class="fa fa-binoculars"> </i> What's New</a></li>
         <li><a href="#upgrade"><i class="fa fa-plane"></i> Upgrade</a></li>
     </ul>
 </div>
@@ -607,40 +607,24 @@ export default {
         <p>We have provided some helper functions in <span class="highlight">resources/assets/js/helpers/utilities.js</span> file to make your development easier.</p>
         <ul class="function-list">
             <li>
-                <span class="function-name">setLayout()</span>
-                <p>This function can be use for Setting Layout for Laraspace. Like, Laraspace come with 3 Layout style so if you need to Change Layout use This: </p>
+                <span class="function-name">setLayout(layoutName)</span>
+                <p>This function is used to set a specific Layout. It allows <span class="highlight">default</span>, <span class="highlight">icon-sidebar</span> & <span class="highlight">horizontal</span></p>
                 <pre><code class="language-js">this.$utils.setLayout('icon-sidebar')</code></pre>
-                <p>you can pass layout name as perameter in this function like(default , icon-sidebar & horizontal)</p>
             </li>
             <li>
-                <span class="function-name">setSkin()</span>
-                <p>This function can be use for Setting Skin for Laraspace. Like, Laraspace come with 6 Skin style so if you need to Change Skin use This: </p>
+                <span class="function-name">setSkin(skinName)</span>
+                <p>This function is used to set a Skin, It allows <span class="highlight">default</span>, <span class="highlight">tyrell</span>, <span class="highlight">arryn</span>, <span class="highlight">lannister</span>, <span class="highlight">stark</span> & <span class="highlight">targaryen</span></p>
                 <pre><code class="language-js">this.$utils.setSkin('tyrell')</code></pre>
-                <p>you can pass skin name as perameter in this function like(default , tyrell , arryn , lannister , stark & targaryen)</p>
             </li>
             <li>
-                <span class="function-name">setLogo()</span>
-                <p>This function can be use for Setting Laraspace Logo.if you need to Change Logo use This: </p>
-                <pre><code class="language-js">this.$utils.setLogo('/assets/img/logo_white.png')</code></pre>
-                <p>you can pass path as perameter in this function.</p>
-            </li>
-            <li>
-                <span class="function-name">addClass()</span>
-                <p>This function can be use for adding class to any element using vueJs. if you need to addClass use This: </p>
+                <span class="function-name">addClass(element, className)</span>
+                <p>This function is used to add a class to an existing element. It's not recommended to use this approach in your application but we use this function internally in Laraspace to set the specific layout/skin classes on body.</p>
                 <pre><code class="language-js">addClass('is-invalid')</code></pre>
-                <p>you can pass class name as perameter in this function.</p>
             </li>
             <li>
-                <span class="function-name">hasClass()</span>
-                <p>This function can be use for checking class if that element have same class as perameter than its return ture. if you need to Check use This: </p>
+                <span class="function-name">hasClass(element, className)</span>
+                <p>To check if a given element has the given class.</p>
                 <pre><code class="language-js">hasClass('is-invalid')</code></pre>
-                <p>you can pass class name as perameter in this function.</p>
-            </li>
-            <li>
-                <span class="function-name">reset()</span>
-                <p>This function can be use for reset or remove class if that element have same class as perameter than its remove that calss. if you need to remove class use This: </p>
-                <pre><code class="language-js">reset('layout-') // it will remove all layout class form laraspace.</code></pre>
-                <p>you can pass class name as perameter in this function.</p>
             </li>
         </ul>
         <h5>Laravel : </h5>
@@ -648,7 +632,7 @@ export default {
             <li>
                 <span class="function-name">set_active()</span>
                 <p>This function returns 'active' class if the current url matches the provided pattern. It is used to
-                    set 'active' states</p>
+                    set 'active' state on the menu</p>
               <pre><code class="language-php">// Current URL is /admin/dashboard
 
 set_active('/admin') // Returns : ''</code></pre>
@@ -696,12 +680,13 @@ $is_dashboard = is_url('admin/dashboard'); // Returns : true</code></pre>
         <p>For example : <span class="highlight">&lt;body class="skin-tyrell"&gt;</span></p>
     </section>
     <section id="change-log">
+        <h3><i class="fa fa-binoculars"></i> What's New</h3>
         <h5 class="m-b-1"><span class="highlight">Version : 1.5 </span></h5>
         <p>This update is more focused towards the Vue Version, click here to know more about it: <a href="vue.html#change-log"></a></p>
         <ul>
             <li>Laravel 5.6 Support</li>
             <li>Removed all jQuery plugins</li>
-            <li>Add custom components like vDropdown, </li>
+            <li>Added 15+ new custom Vue Components</li>
             <li>Bug fixes</li>
         </ul>
     </section>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Laraspace - Vue - Documentation</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -8,243 +9,366 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body class="sidebar-default">
-<header class="site-header">
-    <a href="#" class="nav-toggle">
-        <div class="hamburger hamburger--arrowturn">
-            <div class="hamburger-box">
-                <div class="hamburger-inner"></div>
+    <header class="site-header">
+        <a href="#" class="nav-toggle">
+            <div class="hamburger hamburger--arrowturn">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
             </div>
-        </div>
-    </a>
-    <a href="#" class="brand-main"><img src="img/logo.png" alt="Laraspace Logo"></a>
-    <ul class="action-list">
-        <li><a href="index.html">Laravel</a></li>
-        <li class="active"><a href="vue.html">Vue</a></li>
-        <li><a href="html.html">HTML</a></li>
-    </ul>
-</header>
-<div class="sidebar-left" id="main">
-    <ul class="side-nav">
-        <li><a href="#getting-started"><i class="fa fa-plane"></i> Getting Started</a></li>
-        <li><a href="#vuejs-workflow"><i class="fa fa-code"></i> VueJS Workflow</a></li>
-        <li><a href="#sass-workflow"><i class="fa fa-compress"></i> Sass Workflow</a></li>
-        <li><a href="#notifications"><i class="fa fa-bell"></i> Notifications</a></li>
-        <li><a href="#components"><i class="fa fa-puzzle-piece"></i> Components</a></li>
-        <li><a href="#forms"><i class="fa fa-rocket"></i> Forms</a></li>
-        <li><a href="#navigation"><i class="fa fa-ship"></i> Navigation</a></li>
-        <li><a href="#plugins"><i class="fa fa-rocket"></i> Plugins</a></li>
-        <li><a href="#settings-api"><i class="fa fa-cogs"></i> Settings API</a></li>
-        <li><a href="#helpers"><i class="fa fa-life-ring"></i> Helpers</a></li>
-        <li><a href="#skins"><i class="fa fa-cogs"> </i> Skins</a></li>
-        <li><a href="#change-log"><i class="fa fa-binoculars"> </i> What's New</a></li>
-        <li><a href="#upgrade"><i class="fa fa-plane"></i> Upgrade</a></li>
-    </ul>
-</div>
-<div class="mobile-menu-overlay"></div>
-<div class="main-content">
-    <section id="getting-started">
-        <h3 class="no-mt"><i class="fa fa-plane"></i> Getting Started</h3>
-        <p>Laraspace is an Admin starter template for <a href="http://laravel.com">Laravel 5.6</a> PHP Framework which
-            includes all the necessary boilerplate for your next web application.</p>
-        <h5>Requirements:</h5>
-        <p>Laraspace has the same requirements that Laravel does but we have mentioned them below anyway for your
-            reference.</p>
-        <h6>Server Requirements:</h6>
-        <ul>
-            <li>PHP >= 7.1.3</li>
-            <li>OpenSSL PHP Extension</li>
-            <li>PDO PHP Extension</li>
-            <li>Mbstring PHP Extension</li>
-            <li>Tokenizer PHP Extension</li>
-            <li>XML PHP Extension</li>
-        </ul>
-        <h6>Other Requirements:</h6>
-        <ul>
-            <li>NPM</li>
-            <li>Composer</li>
-        </ul>
-        <h5>Suggested Dev Environments:</h5>
-        <ul>
-            <li>Mac: MAMP/MAMP Pro/ <a href="https://laravel.com/docs/5.4/valet">Laravel Valet</a> (Recommended)</li>
-            <li>Windows: WAMP / Laragon (Recommended & Easier to setup)</li>
-            <li><a href="https://laravel.com/docs/5.4/homestead">Laravel Homestead</a></li>
-        </ul>
-        <h5>Installation:</h5>
-        <ol class="step-list">
-            <li>Clone or Download the Laraspace repository from:<span class="highlight">http://github.com/laraspace/laraspace-vue</span> </li>
-            <li>Unzip the downloaded folder.</li>
-            <li>Using your preferred terminal , go to the laraspace folder and run the following command to set a random
-                secure Application Key <span class="highlight">php artisan key:generate</span></li>
-            <li>Open <span class="highlight">database/seeds/UsersTableSeeder.php</span> and change the admin's email & password to your preference.</li>
-            <li>Open .env file in your favorite text editor and set the database credentials.</li>
-            <li><span class="highlight">php artisan migrate --seed</span> run this command for migrating & seeding the database inside your app folder.
+        </a>
+        <a href="#" class="brand-main">
+            <img src="img/logo.png" alt="Laraspace Logo">
+        </a>
+        <ul class="action-list">
+            <li>
+                <a href="index.html">Laravel</a>
             </li>
-            <li>Install NPM globally if you haven't installed that already , for more information please refer this <a
-                    href="https://docs.npmjs.com/getting-started/installing-node">link</a></li>
-            <li>After installing NPM globally , run <span class="highlight">npm install</span> inside your webroot , it
-                will download all the required dependencies.
+            <li class="active">
+                <a href="vue.html">Vue</a>
             </li>
-            <li>You are ready to launch!</li>
-        </ol>
-    </section>
-    <section id="vuejs-workflow">
-        <h3><i class="fa fa-code"></i> Vuejs Workflow</h3>
-        <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out <span
-                class="highlight">webpack.mix.js</span> for underlying code.</p>
-        <p>All Laraspace VueJS files are located in <span class="highlight"> resources/assets/js </span> folder.</p>
-        <h5>Directory & File Structure for VueJS</h5>
-        <div class="form-text">
-            <ul class="directory-list">
-            	<li><i class="fa fa-folder"></i> <span>components</span> : Global Components </li>
-                <li><i class="fa fa-folder"></i> <span>helpers</span> : Helper files provided by default</li>
-                <li><i class="fa fa-folder"></i> <span>services</span> : Services provided by default</li>
-                <li><i class="fa fa-folder"></i> <span>views</span> :  View components </li>
-                <li><i class="fa fa-file"></i> <span>app.js</span> : Main javascript entry file for our App</li>
-                <li><i class="fa fa-file"></i> <span>bootstrap.js</span> :  JS File to Bootstrap all the required plugins & config</li>
-                <li><i class="fa fa-file"></i> <span>router.js</span> : Main Router File<li>
+            <li>
+                <a href="html.html">HTML</a>
+            </li>
+        </ul>
+    </header>
+    <div class="sidebar-left" id="main">
+        <ul class="side-nav">
+            <li>
+                <a href="#getting-started">
+                    <i class="fa fa-plane"></i> Getting Started</a>
+            </li>
+            <li>
+                <a href="#vuejs-workflow">
+                    <i class="fa fa-code"></i> VueJS Workflow</a>
+            </li>
+            <li>
+                <a href="#sass-workflow">
+                    <i class="fa fa-compress"></i> Sass Workflow</a>
+            </li>
+            <li>
+                <a href="#notifications">
+                    <i class="fa fa-bell"></i> Notifications</a>
+            </li>
+            <li>
+                <a href="#components">
+                    <i class="fa fa-puzzle-piece"></i> Components</a>
+            </li>
+            <li>
+                <a href="#forms">
+                    <i class="fa fa-rocket"></i> Forms</a>
+            </li>
+            <li>
+                <a href="#navigation">
+                    <i class="fa fa-ship"></i> Navigation</a>
+            </li>
+            <li>
+                <a href="#plugins">
+                    <i class="fa fa-rocket"></i> Plugins</a>
+            </li>
+            <li>
+                <a href="#settings-api">
+                    <i class="fa fa-cogs"></i> Settings API</a>
+            </li>
+            <li>
+                <a href="#helpers">
+                    <i class="fa fa-life-ring"></i> Helpers</a>
+            </li>
+            <li>
+                <a href="#skins">
+                    <i class="fa fa-cogs"> </i> Skins</a>
+            </li>
+            <!-- <li>
+                <a href="#change-log">
+                    <i class="fa fa-binoculars"> </i> What's New</a>
+            </li>
+            <li>
+                <a href="#upgrade">
+                    <i class="fa fa-plane"></i> Upgrade</a>
+            </li> -->
+        </ul>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+    <div class="main-content">
+        <section id="getting-started">
+            <h3 class="no-mt">
+                <i class="fa fa-plane"></i> Getting Started</h3>
+            <p>Laraspace is an Admin starter template for
+                <a href="http://laravel.com">Laravel 5.7</a> PHP Framework which includes all the necessary boilerplate for your next web application.</p>
+            <h5>Requirements:</h5>
+            <p>Laraspace has the same requirements that Laravel does but we have mentioned them below anyway for your reference.
+            </p>
+            <h6>Server Requirements:</h6>
+            <ul>
+                <li>PHP >= 7.1.3</li>
+                <li>OpenSSL PHP Extension</li>
+                <li>PDO PHP Extension</li>
+                <li>Mbstring PHP Extension</li>
+                <li>Tokenizer PHP Extension</li>
+                <li>XML PHP Extension</li>
             </ul>
-        </div>
-        <h5>Compiling Assets</h5>
-        <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you can use :</p>
-
-        <dl class="row">
-            <dt class="col-sm-3">npm run dev :</dt>
-            <dd class="col-sm-9"> Compile assets without watch</dd>
-
-            <dt class="col-sm-3">npm run watch :</dt>
-            <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
-
-            <dt class="col-sm-3">npm run hot :</dt>
-            <dd class="col-sm-9">Compile assets and watch the files with Hot-Module-Reload enabled</dd>
-
-            <dt class="col-sm-3">npm run production :</dt>
-            <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
-        </dl>
-        <p>You can read more about Laravel Mix <a href="https://laravel.com/docs/5.4/mix">here</a>.</p>
-    </section>
-    <section id="sass-workflow">
-        <h3><i class="fa fa-compress"></i> Sass Workflow</h3>
-        <p>All Laraspace Sass files are located in <span class="highlight"> resources/assets/sass </span>
-            folder. <br> note: You can remove the components which you're not gonna use inside your project to reduce
-            the filesize.</p>
-        <p>Laraspace css files compiled output location : <span class="highlight">public/assets/css/laraspace.css</span>
-        </p>
-        <h5>Directory & File Structure for SASS</h5>
-        <div class="form-text">
-            <ul class="directory-list">
-                <li><i class="fa fa-folder"></i> <span>layouts</span> : styles for Laraspace layout
-                </li>
-                <li><i class="fa fa-folder"></i> <span>pages</span> : specific page styles
-                </li>
-                <li><i class="fa fa-folder"></i> <span>components</span> : styles for components like buttons , cards &
-                    tabs
-                </li>
-                <li><i class="fa fa-folder"></i> <span>partials</span> : styles for layout partials , i.e header ,
-                    footer & sidebar
-                </li>
-                <li><i class="fa fa-file"></i> <span>laraspace.scss</span> : main entry point of all sass files.</li>
-                <li><i class="fa fa-file"></i> <span>variables.scss</span> : main config file</li>
-                <li><i class="fa fa-file"></i> <span>base.scss</span> : base styles for Laraspace</li>
-                <li><i class="fa fa-file"></i> <span>demo.scss</span> : styles for demo , you can remove the reference
-                    to this file.
+            <h6>Other Requirements:</h6>
+            <ul>
+                <li>NPM</li>
+                <li>Composer</li>
+            </ul>
+            <h5>Suggested Dev Environments:</h5>
+            <ul>
+                <li>Mac: MAMP/MAMP Pro/
+                    <a href="https://laravel.com/docs/5.4/valet">Laravel Valet</a> (Recommended)</li>
+                <li>Windows: WAMP / Laragon (Recommended & Easier to setup)</li>
+                <li>
+                    <a href="https://laravel.com/docs/5.4/homestead">Laravel Homestead</a>
                 </li>
             </ul>
-        </div>
-    </section>
-    <section id="notifications">
-        <h3><i class="fa fa-bell"></i> Notifications</h3>
-        <p>You can use Toastr & Notie Jquery plugins included in Laraspace by default for firing Notifications in your Vue Components.  You can check the examples in <span class="highlight">resources/assets/js/pages/components/Notifications.vue</span> file.</p>
-    </section>
-    <section id="components">
-        <h3><i class="fa fa-puzzle-piece"></i> Components</h3>
-        <p>Laraspace comes with many useful components which you can use in your project directly by just importing it on page where you want to use. Here's a list of all Vue based components included with Laraspace: </p>
-        <ul>
-            <li><a href="#components-collapse">Collapse</a></li>
-            <li><a href="#components-dropdown">DropDown</a></li>
-            <li><a href="#components-sweetmodal">SweetModal</a></li>
-            <li><a href="#components-carousel">Vue Carousel</a></li>
-            <li><a href="#components-dropzone">Vue Dropzone</a></li>
-            <li><a href="#components-datatables">Vue Datatables</a></li>
-            <li><a href="#components-tabs">Vue Tabs</a></li>
-            <li><a href="#components-tooltips">Vue Tooltips</a></li>
-        </ul>
-        <p>We have provided a brief description about how to use each component, but to know more you can visit the source link and see the full documentation of the provided plugin/component.</p>
-        <h5 id="components-collapse">Collapse: </h5>
-        <div>
-<p>
-    <code class="highlight">&lt;v-collapse&gt; </code>and
-    <code class="highlight">&lt;v-collapse-item&gt;</code> components are used when you want a content area which can be collapsed and expanded with animation. It can also be used as an Accordian Panel similar to the one on bootstrap.</p>
-<p>Both of these components are globally imported in
-    <span class="highlight"> resources/assets/js/bootstrap.js</span>. and the source file for the component is stored in <span class="highlight">resources/assets/js/components/collapse/VCollapse.vue and VCollapseItem.vue</span></p>
-<p>
-    <pre><code class="language-js">import VCollapse from './components/collapse/VCollapse'</code><br><code class="language-js">import VCollapseItem from './components/collapse/VCollapseItem'</code></pre>
-</p>
-<h6>Template Structure:</h6>
-<p>
-    <pre><code class="language-html"> &lt;v-collapse&gt;
+            <h5>Installation:</h5>
+            <ol class="step-list">
+                <li>Clone or Download the Laraspace repository from:
+                    <span class="highlight">http://github.com/laraspace/laraspace-vue</span>
+                </li>
+                <li>Unzip the downloaded folder.</li>
+                <li>Using your preferred terminal , go to the laraspace folder and run the following command to set a random
+                    secure Application Key
+                    <span class="highlight">php artisan key:generate</span>
+                </li>
+                <li>Open
+                    <span class="highlight">database/seeds/UsersTableSeeder.php</span> and change the admin's email & password to your preference.</li>
+                <li>Open .env file in your favorite text editor and set the database credentials.</li>
+                <li>
+                    <span class="highlight">php artisan migrate --seed</span> run this command for migrating & seeding the database inside your app
+                    folder.
+                </li>
+                <li>Install NPM globally if you haven't installed that already , for more information please refer this
+                    <a href="https://docs.npmjs.com/getting-started/installing-node">link</a>
+                </li>
+                <li>After installing NPM globally , run
+                    <span class="highlight">npm install</span> inside your webroot , it will download all the required dependencies.
+                </li>
+                <li>You are ready to launch!</li>
+            </ol>
+        </section>
+        <section id="vuejs-workflow">
+            <h3>
+                <i class="fa fa-code"></i> Vuejs Workflow</h3>
+            <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out
+                <span class="highlight">webpack.mix.js</span> for underlying code.</p>
+            <p>All Laraspace VueJS files are located in
+                <span class="highlight"> resources/assets/js </span> folder.</p>
+            <h5>Directory & File Structure for VueJS</h5>
+            <div class="form-text">
+                <ul class="directory-list">
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>components</span> : Global Components </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>helpers</span> : Helper files provided by default</li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>services</span> : Services provided by default</li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>views</span> : View components </li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>app.js</span> : Main javascript entry file for our App</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>bootstrap.js</span> : JS File to Bootstrap all the required plugins & config</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>router.js</span> : Main Router File
+                        <li>
+                </ul>
+            </div>
+            <h5>Compiling Assets</h5>
+            <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you
+                can use :</p>
+
+            <dl class="row">
+                <dt class="col-sm-3">npm run dev :</dt>
+                <dd class="col-sm-9"> Compile assets without watch</dd>
+
+                <dt class="col-sm-3">npm run watch :</dt>
+                <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
+
+                <dt class="col-sm-3">npm run hot :</dt>
+                <dd class="col-sm-9">Compile assets and watch the files with Hot-Module-Reload enabled</dd>
+
+                <dt class="col-sm-3">npm run production :</dt>
+                <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
+            </dl>
+            <p>You can read more about Laravel Mix
+                <a href="https://laravel.com/docs/5.4/mix">here</a>.</p>
+        </section>
+        <section id="sass-workflow">
+            <h3>
+                <i class="fa fa-compress"></i> Sass Workflow</h3>
+            <p>All Laraspace Sass files are located in
+                <span class="highlight"> resources/assets/sass </span>
+                folder.
+                <br> note: You can remove the components which you're not gonna use inside your project to reduce the filesize.</p>
+            <p>Laraspace css files compiled output location :
+                <span class="highlight">public/assets/css/laraspace.css</span>
+            </p>
+            <h5>Directory & File Structure for SASS</h5>
+            <div class="form-text">
+                <ul class="directory-list">
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>layouts</span> : styles for Laraspace layout
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>pages</span> : specific page styles
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>components</span> : styles for components like buttons , cards & tabs
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>partials</span> : styles for layout partials , i.e header , footer & sidebar
+                    </li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>laraspace.scss</span> : main entry point of all sass files.</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>variables.scss</span> : main config file</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>base.scss</span> : base styles for Laraspace</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>demo.scss</span> : styles for demo , you can remove the reference to this file.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="notifications">
+            <h3>
+                <i class="fa fa-bell"></i> Notifications</h3>
+            <p>You can use Toastr & Notie Jquery plugins included in Laraspace by default for firing Notifications in your Vue
+                Components. You can check the examples in
+                <span class="highlight">resources/assets/js/pages/components/Notifications.vue</span> file.</p>
+        </section>
+        <section id="components">
+            <h3>
+                <i class="fa fa-puzzle-piece"></i> Components</h3>
+            <p>Laraspace comes with many useful components which you can use in your project directly by just importing it on
+                page where you want to use. Here's a list of all Vue based components included with Laraspace: </p>
+            <ul>
+                <li>
+                    <a href="#components-collapse">Collapse</a>
+                </li>
+                <li>
+                    <a href="#components-dropdown">DropDown</a>
+                </li>
+                <li>
+                    <a href="#components-sweetmodal">SweetModal</a>
+                </li>
+                <li>
+                    <a href="#components-carousel">Vue Carousel</a>
+                </li>
+                <li>
+                    <a href="#components-dropzone">Vue Dropzone</a>
+                </li>
+                <li>
+                    <a href="#components-datatables">Vue Datatables</a>
+                </li>
+                <li>
+                    <a href="#components-tabs">Vue Tabs</a>
+                </li>
+                <li>
+                    <a href="#components-tooltips">Vue Tooltips</a>
+                </li>
+            </ul>
+            <p>We have provided a brief description about how to use each component, but to know more you can visit the source
+                link and see the full documentation of the provided plugin/component.</p>
+            <h5 id="components-collapse">Collapse: </h5>
+            <div>
+                <p>
+                    <code class="highlight">&lt;v-collapse&gt; </code>and
+                    <code class="highlight">&lt;v-collapse-item&gt;</code> components are used when you want a content area which can be collapsed and expanded with animation.
+                    It can also be used as an Accordian Panel similar to the one on bootstrap.</p>
+                <p>Both of these components are globally imported in
+                    <span class="highlight"> resources/assets/js/bootstrap.js</span>. and the source file for the component is stored in
+                    <span class="highlight">resources/assets/js/components/collapse/VCollapse.vue and VCollapseItem.vue</span>
+                </p>
+                <p>
+                    <pre><code class="language-js">import VCollapse from './components/collapse/VCollapse'</code><br><code class="language-js">import VCollapseItem from './components/collapse/VCollapseItem'</code></pre>
+                </p>
+                <h6>Template Structure:</h6>
+                <p>
+                    <pre><code class="language-html"> &lt;v-collapse&gt;
     &lt;v-collapse-item&gt;
         &lt;!-- add content here --&gt;
     &lt;/v-collapse-item&gt;
  &lt;/v-collapse&gt;</code></pre>
-</p>
-<h6 class="mb-2">API:</h6>
-<span class="highlight api-head">VCollapse</span>
-<table class="table table-bordered gray-bg">
-    <thead>
-        <tr>
-            <th width="20%">Props</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">accordion</th>
-            <td>If true, only one item can be expanded at a time</td>
-            <td>Boolean</td>
-            <td>false</td>
-        </tr>
-    </tbody>
-</table>
-<span class="highlight api-head">VCollapseItem</span>
-<table class="table table-bordered gray-bg">
-    <thead>
-        <tr>
-            <th width="20%">Props</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">active-url</th>
-            <td>Takes the url as a prop and expands the collapse-item if it matches the current url</td>
-            <td>String</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <th scope="row">is-active</th>
-            <td>To keep the collapse open or closed</td>
-            <td>Boolean</td>
-            <td>false</td>
-        </tr>
-    </tbody>
-</table>
+                </p>
+                <h6 class="mb-2">API:</h6>
+                <span class="highlight api-head">VCollapse</span>
+                <table class="table table-bordered gray-bg">
+                    <thead>
+                        <tr>
+                            <th width="20%">Props</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">accordion</th>
+                            <td>If true, only one item can be expanded at a time</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <span class="highlight api-head">VCollapseItem</span>
+                <table class="table table-bordered gray-bg">
+                    <thead>
+                        <tr>
+                            <th width="20%">Props</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">active-url</th>
+                            <td>Takes the url as a prop and expands the collapse-item if it matches the current url</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">is-active</th>
+                            <td>To keep the collapse open or closed</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-</div>
-        <h5 id="components-dropdown">Dropdown: </h5>
-        <div>
-        <p>Dropdown Component is a Toggleable menu for displaying lists of links and actions.</p>
-        <p>This component is also globally imported in <span class="highlight">resources/assets/js/bootstrap.js</span> and its source file is stored at
-        <span class="highlight">resources/assets/js/components/dropdown/VDropdown and VDropdownItem.vue</span>
-        </p>
-        <p>VDropdown is used as the container which wraps all the items and VDropdownItem is used to display items inside that container.
-        </p>
-        <h6>Vue Structure</h6>
-        <p><pre><code class="language-html">&lt;v-dropdown&gt;
+            </div>
+            <h5 id="components-dropdown">Dropdown: </h5>
+            <div>
+                <p>Dropdown Component is a Toggleable menu for displaying lists of links and actions.</p>
+                <p>This component is also globally imported in
+                    <span class="highlight">resources/assets/js/bootstrap.js</span> and its source file is stored at
+                    <span class="highlight">resources/assets/js/components/dropdown/VDropdown and VDropdownItem.vue</span>
+                </p>
+                <p>VDropdown is used as the container which wraps all the items and VDropdownItem is used to display items inside
+                    that container.
+                </p>
+                <h6>Vue Structure</h6>
+                <p>
+                    <pre><code class="language-html">&lt;v-dropdown&gt;
     &lt;button type="button" slot="activator" /&gt; &lt;!-- Element to activate the dropdown --&gt;
 
     &lt;v-dropdown-item&gt;
@@ -255,62 +379,73 @@
        &lt;a href="index.vue" &gt;Index &lt;/a &gt;
     &lt;/v-dropdown-item&gt;
 &lt;/v-dropdown&gt;</code></pre>
-        </p>
-        <h6>API:</h6>
-            <span class="highlight api-head">VDropdown</span>
-            <table class="table table-bordered gray-bg">
-                <thead>
-                    <tr>
-                        <th width="25%">Props</th>
-                        <th>Description</th>
-                        <th>Type</th>
-                        <th>Default</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">active-url</th>
-                        <td>Active Url Props Allows you to add active class on specific url</td>
-                        <td>String</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">show-arrow</th>
-                        <td>Show/Hide Arrows for dropdown</td>
-                        <td>Boolean</td>
-                        <td>true</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">dropdown-light</th>
-                        <td>Use light theme for dropdown</td>
-                        <td>Boolean</td>
-                        <td>false</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">close-on-select</th>
-                        <td>Automatically close the dropdown on clicking an item</td>
-                        <td>Boolean</td>
-                        <td>true</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <h5 id="components-sweetmodal">SweetModal: </h5>
-        <div>
-            <p>Sweetmodal is a Modal Component which can be used to create Modals with a variety of options like Nested Modals, Tabs, Long scrolling modals, etc</p>
-            <h6>For local use:</h6>
-            <p><pre><code class="language-php">import { SweetModal, SweetModalTab } from 'sweet-modal-vue'</code></pre></p>
-            <p>For more information about SweetModal, see
-            <a href="https://github.com/adeptoas/sweet-modal-vue" target="_">Here</a> </p>
-        </div>
-        <h5 id="components-carousel">Vue Carousel: </h5>
-        <div>
-        <p>Vue Carousel is a flexible, responsive, touch-friendly carousel with a lot of options for customisation.</p>
-        <p>Demo view file: <span class="highlight">resources/assets/js/views/admin/components/VueCarousel.vue</span> and its scss file is stored at <span class="highlight">resources/assets/sass/components/vue-carousel.scss</span> </p>
-        <h6>For local use:</h6>
-        <p><pre><code class="language-php">import { Carousel, Slide } from 'vue-carousel';</code></pre></p>
-        <h6>Template Structure</h6>
-        <p><pre><code class="language-html">&lt;carousel&gt;
+                </p>
+                <h6>API:</h6>
+                <span class="highlight api-head">VDropdown</span>
+                <table class="table table-bordered gray-bg">
+                    <thead>
+                        <tr>
+                            <th width="25%">Props</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">active-url</th>
+                            <td>Active Url Props Allows you to add active class on specific url</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">show-arrow</th>
+                            <td>Show/Hide Arrows for dropdown</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">dropdown-light</th>
+                            <td>Use light theme for dropdown</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">close-on-select</th>
+                            <td>Automatically close the dropdown on clicking an item</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h5 id="components-sweetmodal">SweetModal: </h5>
+            <div>
+                <p>Sweetmodal is a Modal Component which can be used to create Modals with a variety of options like Nested
+                    Modals, Tabs, Long scrolling modals, etc</p>
+                <h6>For local use:</h6>
+                <p>
+                    <pre><code class="language-php">import { SweetModal, SweetModalTab } from 'sweet-modal-vue'</code></pre>
+                </p>
+                <p>For more information about SweetModal, see
+                    <a href="https://github.com/adeptoas/sweet-modal-vue" target="_">Here</a>
+                </p>
+            </div>
+            <h5 id="components-carousel">Vue Carousel: </h5>
+            <div>
+                <p>Vue Carousel is a flexible, responsive, touch-friendly carousel with a lot of options for customisation.</p>
+                <p>Demo view file:
+                    <span class="highlight">resources/assets/js/views/admin/components/VueCarousel.vue</span> and its scss file is stored at
+                    <span
+                        class="highlight">resources/assets/sass/components/vue-carousel.scss</span>
+                </p>
+                <h6>For local use:</h6>
+                <p>
+                    <pre><code class="language-php">import { Carousel, Slide } from 'vue-carousel';</code></pre>
+                </p>
+                <h6>Template Structure</h6>
+                <p>
+                    <pre><code class="language-html">&lt;carousel&gt;
     &lt;slide&gt;
      &lt;!-- Slide 1 Content --&gt;
     &lt;/slide&gt;
@@ -318,23 +453,30 @@
      &lt;!-- Slide 2 Content --&gt;
     &lt;/slide&gt;
 &lt;/carousel&gt;</code></pre>
-        </p>
-         <p>For more information about VueCarousel, see
-        <a href="https://ssense.github.io/vue-carousel/guide/" target="_">Here</a>
-        </p>
-        </div>
-        <h5 id="components-dropzone">Vue Dropzone: </h5>
-        <div>
-        <p>VueDropzone is a wrapper component for <a href="http://www.dropzonejs.com/">DropzoneJS</a> to provide drag and drop file uploads with image previews and a ton of other features. </p>
-        <p>VueDropzone component file is stored at <span class="highlight">resources/assets/js/views/admin/components/VueDropzone.vue</span> and its scss file is stored in <span class="highlight">resources/assets/sass/components/vue-carousel.scss</span></p>
-        <h6>For local use:</h6>
-        <p>
-            <pre><code class="language-js">import VueDropzone from 'vue2-dropzone'</code></pre>
-        </p>
-        <h6>Template Structure:</h6>
-        <p><pre><code class="language-html">&lt;vue-dropzone  id="dropzone" :options="dropzoneOptions" ref="myVueDropzone"&gt;&lt;/vue-dropzone&gt;</code></pre>
-<h6>Script:</h6>
-<pre>
+                </p>
+                <p>For more information about VueCarousel, see
+                    <a href="https://ssense.github.io/vue-carousel/guide/" target="_">Here</a>
+                </p>
+            </div>
+            <h5 id="components-dropzone">Vue Dropzone: </h5>
+            <div>
+                <p>VueDropzone is a wrapper component for
+                    <a href="http://www.dropzonejs.com/">DropzoneJS</a> to provide drag and drop file uploads with image previews and a ton of other features.
+                    </p>
+                <p>VueDropzone component file is stored at
+                    <span class="highlight">resources/assets/js/views/admin/components/VueDropzone.vue</span> and its scss file is stored in
+                    <span
+                        class="highlight">resources/assets/sass/components/vue-carousel.scss</span>
+                </p>
+                <h6>For local use:</h6>
+                <p>
+                    <pre><code class="language-js">import VueDropzone from 'vue2-dropzone'</code></pre>
+                </p>
+                <h6>Template Structure:</h6>
+                <p>
+                    <pre><code class="language-html">&lt;vue-dropzone  id="dropzone" :options="dropzoneOptions" ref="myVueDropzone"&gt;&lt;/vue-dropzone&gt;</code></pre>
+                    <h6>Script:</h6>
+                    <pre>
 <code class="language-javascript">export default {
   name: 'app',
   components: {
@@ -353,22 +495,27 @@
 }
 </code>
 </pre>
-         <p>For more information about VueDropzone, see
-        <a href="https://ssense.github.io/vue-carousel/api/" target="_">Here</a>
-        </p>
-        </div>
+                    <p>For more information about VueDropzone, see
+                        <a href="https://ssense.github.io/vue-carousel/api/" target="_">Here</a>
+                    </p>
+            </div>
 
-        <h5 id="components-datatables">Vue Datatables: </h5>
-        <div>
-        <p>Vue Datatables component allows you to render a filterable and sortable table. It is very lightweight and easy
-        to use. It has support for retrieving data asynchronously and pagination.</p>
-        <p>Vue Datatables component file is stored at <span class="highlight">resources/assets/js/views/admin/components/VueTables.vue</span> and its scss file is stored at <span class="highlight">resources/assets/sass/components/tables.scss</span></p>
-        <h6> For Local Use:</h6>
-        <p>
-            <pre><code class="language-js">import { TableComponent, TableColumn } from 'vue-table-component';</code></pre>
-        </p>
-        <h6>Template Structure:</h6>
-        <p><pre><code class="language-html">&lt;table-component
+            <h5 id="components-datatables">Vue Datatables: </h5>
+            <div>
+                <p>Vue Datatables component allows you to render a filterable and sortable table. It is very lightweight and
+                    easy to use. It has support for retrieving data asynchronously and pagination.</p>
+                <p>Vue Datatables component file is stored at
+                    <span class="highlight">resources/assets/js/views/admin/components/VueTables.vue</span> and its scss file is stored at
+                    <span
+                        class="highlight">resources/assets/sass/components/tables.scss</span>
+                </p>
+                <h6> For Local Use:</h6>
+                <p>
+                    <pre><code class="language-js">import { TableComponent, TableColumn } from 'vue-table-component';</code></pre>
+                </p>
+                <h6>Template Structure:</h6>
+                <p>
+                    <pre><code class="language-html">&lt;table-component
   :data="getUsers"
   sort-by="row.name"
   sort-order="desc"
@@ -376,32 +523,42 @@
   &lt;table-column show="firstName" label="First name"&gt;&lt;/table-column&gt;
 &lt;/table-component&gt;</code></pre>
 
-         <p>For more information about Vue Datatables, see
-        <a href="https://github.com/spatie/vue-table-component" target="_">Here</a>
-        </p>
-        </div>
+                    <p>For more information about Vue Datatables, see
+                        <a href="https://github.com/spatie/vue-table-component" target="_">Here</a>
+                    </p>
+            </div>
 
-        <h5 id="components-tabs">Vue Tabs: </h5>
-        <div>
-        <p>A simple and easy to use Tabs component with customised according to Laraspace themes.</p>
-        <p>VueTabs demo view file is stored at <span class="highlight">resources/assets/js/views/admin/components/VueTabs.vue</span> and its scss file is stored at <span class="highlight">resources/assets/sass/components/vue-tabs.scss</span></p>
-        <p></p>
-        <h6>Types</h6>
-        <p>Use one of the custom classes below on the tabs wrapper to style the tabs according to your choice:</p>
-            <ul >
-                <li><span class="highlight">tabs-default</span> : Horizontal Tabs default style </li>
-                <li><span class="highlight">tabs-default primary</span>: Horizontal Tabs with primary color style</li>
-                <li><span class="highlight">tabs-simple</span> : Horizontal Tabs with simple style</li>
-                <li><span class="highlight">tabs-vertical</span> : Vertical Tabs with default style</li>
-                <li><span class="highlight">tabs-vertical primary</span> : Vertical Tabs with primary style</li>
-                <li><span class="highlight">tabs-simple-vertical</span> : Vertical Tabs with simple style</li>
-            </ul>
-        <h6> For Local Use:</h6>
-        <p>
-            <pre><code class="language-js">import { Tabs, Tab } from 'vue-tabs-component'</code></pre>
-        </p>
-        <h6>TEMPLATE Structure</h6>
-        <p><pre><code class="language-html">&lt;tabs class="tabs-default"&gt;
+            <h5 id="components-tabs">Vue Tabs: </h5>
+            <div>
+                <p>A simple and easy to use Tabs component with customised according to Laraspace themes.</p>
+                <p>VueTabs demo view file is stored at
+                    <span class="highlight">resources/assets/js/views/admin/components/VueTabs.vue</span> and its scss file is stored at
+                    <span class="highlight">resources/assets/sass/components/vue-tabs.scss</span>
+                </p>
+                <p></p>
+                <h6>Types</h6>
+                <p>Use one of the custom classes below on the tabs wrapper to style the tabs according to your choice:</p>
+                <ul>
+                    <li>
+                        <span class="highlight">tabs-default</span> : Horizontal Tabs default style </li>
+                    <li>
+                        <span class="highlight">tabs-default primary</span>: Horizontal Tabs with primary color style</li>
+                    <li>
+                        <span class="highlight">tabs-simple</span> : Horizontal Tabs with simple style</li>
+                    <li>
+                        <span class="highlight">tabs-vertical</span> : Vertical Tabs with default style</li>
+                    <li>
+                        <span class="highlight">tabs-vertical primary</span> : Vertical Tabs with primary style</li>
+                    <li>
+                        <span class="highlight">tabs-simple-vertical</span> : Vertical Tabs with simple style</li>
+                </ul>
+                <h6> For Local Use:</h6>
+                <p>
+                    <pre><code class="language-js">import { Tabs, Tab } from 'vue-tabs-component'</code></pre>
+                </p>
+                <h6>TEMPLATE Structure</h6>
+                <p>
+                    <pre><code class="language-html">&lt;tabs class="tabs-default"&gt;
   &lt;tab name="tab1"&gt;
      &lt;!-- Your content --&gt;
   &lt;/tab&gt;
@@ -413,96 +570,131 @@
   &lt;/tab&gt;
 &lt;/tabs&gt;</code></pre>
 
-         <p>For more information about Vue Tabs, see
-        <a href="https://github.com/spatie/vue-tabs-component" target="_">Here</a>
-        </p>
-        </div>
+                    <p>For more information about Vue Tabs, see
+                        <a href="https://github.com/spatie/vue-tabs-component" target="_">Here</a>
+                    </p>
+            </div>
 
-        <h5 id="components-tooltips">Vue Tooltips: </h5>
-        <div>
-        <p>This component allows you to create tooltips and popovers</p>
-        <p>VueTooltip demo view file is stored at <span class="highlight">resources/assets/js/views/admin/components/VueTooltips.vue</span> and its scss file is stored at <span class="highlight">/resources/assets/sass/components/tooltips.scss</span></p>
-        <p>We have already imported VTooltip globally in <span class="highlight">resources/assets/js/bootstrap.js</span>, so you can use this plugin anywhere in the app without importing.</p>
-        <h6>Template Structure</h6>
-        <p>Using v-tooltip directive:</p>
-        <p><pre><code class="language-html">&lt;button v-tooltip="'You have ' + count + ' new messages.'"&gt;&lt;/button&gt;</code></pre>
-        <p>Use the v-popover component:</p>
-        <p><pre><code class="language-html">&lt;v-popover&gt;
+            <h5 id="components-tooltips">Vue Tooltips: </h5>
+            <div>
+                <p>This component allows you to create tooltips and popovers</p>
+                <p>VueTooltip demo view file is stored at
+                    <span class="highlight">resources/assets/js/views/admin/components/VueTooltips.vue</span> and its scss file is stored at
+                    <span
+                        class="highlight">/resources/assets/sass/components/tooltips.scss</span>
+                </p>
+                <p>We have already imported VTooltip globally in
+                    <span class="highlight">resources/assets/js/bootstrap.js</span>, so you can use this plugin anywhere in the app without importing.</p>
+                <h6>Template Structure</h6>
+                <p>Using v-tooltip directive:</p>
+                <p>
+                    <pre><code class="language-html">&lt;button v-tooltip="'You have ' + count + ' new messages.'"&gt;&lt;/button&gt;</code></pre>
+                    <p>Use the v-popover component:</p>
+                    <p>
+                        <pre><code class="language-html">&lt;v-popover&gt;
      &lt;!-- This will be the popover target (for the events and position) --&gt;
   &lt;button&gt;Click me &lt;/button&gt;
      &lt;!--  This will be the content of the popover --&gt;
   &lt;MyAwesomeComponent slot="popover"&gt;
 &lt;/v-popover&gt;</code></pre>
 
-         <p>For more information about Vue Tooltips, see
-        <a href="https://github.com/Akryum/v-tooltip" target="_">Here</a>
-        </p>
-        </div>
-    </section>
-    <section id="forms">
-        <h3><i class="fa fa-rocket"></i> Forms</h3>
-        <p>Laraspace includes following Form Components: </p>
-        <ul>
-            <li><a href="#forms-multiselect">Vue MultiSelect</a></li>
-            <li><a href="#forms-textmask">Vue TextMask</a></li>
-            <li><a href="#forms-datepicker">Vue DatePicker</a></li>
-            <li><a href="#forms-colorpicker">Vue ColorPicker</a></li>
-            <li><a href="#forms-validation">Vuelidate Validation</a></li>
-        </ul>
-        <h5 id="forms-multiselect">Vue MultiSelect: </h5>
-        <div>
-            <p>Multiselect is probably the most complete selecting solution for Vue.js, without jQuery. You can use this component by importing it into your vue file.</p>
-            <p>Vue multiselect demo view file is stored at <span class="highlight">resources/assets/js/views/admin/forms/advanced-elements/MultiSelectDemo.vue</span> and scss file is stored at <span class="highlight">resources/assets/sass/components/vue-multi-select.scss</span>.</p>
-            <h6>For local use:</h6>
-            <p>
-                <pre><code class="language-js">import Multiselect from 'vue-multiselect'</code></pre>
-            </p>
-            <p>
-            <h6>Template Structure</h6>
-            <p><pre><code class="language-html">&lt;multiselect
+                        <p>For more information about Vue Tooltips, see
+                            <a href="https://github.com/Akryum/v-tooltip" target="_">Here</a>
+                        </p>
+            </div>
+        </section>
+        <section id="forms">
+            <h3>
+                <i class="fa fa-rocket"></i> Forms</h3>
+            <p>Laraspace includes following Form Components: </p>
+            <ul>
+                <li>
+                    <a href="#forms-multiselect">Vue MultiSelect</a>
+                </li>
+                <li>
+                    <a href="#forms-textmask">Vue TextMask</a>
+                </li>
+                <li>
+                    <a href="#forms-datepicker">Vue DatePicker</a>
+                </li>
+                <li>
+                    <a href="#forms-colorpicker">Vue ColorPicker</a>
+                </li>
+                <li>
+                    <a href="#forms-validation">Vuelidate Validation</a>
+                </li>
+            </ul>
+            <h5 id="forms-multiselect">Vue MultiSelect: </h5>
+            <div>
+                <p>Multiselect is probably the most complete selecting solution for Vue.js, without jQuery. You can use this
+                    component by importing it into your vue file.</p>
+                <p>Vue multiselect demo view file is stored at
+                    <span class="highlight">resources/assets/js/views/admin/forms/advanced-elements/MultiSelectDemo.vue</span> and scss file is stored
+                    at
+                    <span class="highlight">resources/assets/sass/components/vue-multi-select.scss</span>.</p>
+                <h6>For local use:</h6>
+                <p>
+                    <pre><code class="language-js">import Multiselect from 'vue-multiselect'</code></pre>
+                </p>
+                <p>
+                    <h6>Template Structure</h6>
+                    <p>
+                        <pre><code class="language-html">&lt;multiselect
   v-model="selected"
   :options="MultiOptions"
   :multiple="true"&gt;
 &lt;/multiselect&gt;
             </code></pre> </p>
-            <p> For more information about VueMultiselect, see <a href="https://github.com/adeptoas/sweet-modal-vue" target="_">Here</a></p>
-        </div>
+                    <p> For more information about VueMultiselect, see
+                        <a href="https://github.com/adeptoas/sweet-modal-vue"
+                            target="_">Here</a>
+                    </p>
+            </div>
 
-        <h5 id="forms-textmask">Vue TextMask: </h5>
-        <div>
-            <p>Text Mask allows you to create input masks for phone, date, currency, zip code, percentage, email, and
-            literally anything!</p>
-            <p>Vue TextMask demo view file is stored in
-                <span class="highlight">resources/assets/js/views/admin/forms/advanced-elements/TextMaskDemo.vue</span>.</p>
-            <h6>For local use:</h6>
-            <p>
-                <pre><code class="language-js">import MaskedInput from 'vue-text-mask' &#13;import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'</code></pre>
-            </p>
-            <p> For more information about Vue TextMask, see<a href="https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme" target="_"> Here</a></p>
-        </div>
+            <h5 id="forms-textmask">Vue TextMask: </h5>
+            <div>
+                <p>Text Mask allows you to create input masks for phone, date, currency, zip code, percentage, email, and literally
+                    anything!</p>
+                <p>Vue TextMask demo view file is stored in
+                    <span class="highlight">resources/assets/js/views/admin/forms/advanced-elements/TextMaskDemo.vue</span>.</p>
+                <h6>For local use:</h6>
+                <p>
+                    <pre><code class="language-js">import MaskedInput from 'vue-text-mask' &#13;import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'</code></pre>
+                </p>
+                <p> For more information about Vue TextMask, see
+                    <a href="https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme"
+                        target="_"> Here</a>
+                </p>
+            </div>
 
-        <h5 id="forms-datepicker">Vue DatePicker: </h5>
-        <div>
-            <p>Simple Datepicker component with a vareity of options and customizations.</p>
-            <h6>For Local Use:</h6>
-            <p>
-                <pre><code class="language-javascript">import Datepicker from 'vuejs-datepicker'</code></pre>
-            </p>
-            <h6>Template Structure</h6>
-            <p><pre><code class="language-html">&lt;datepicker placeholder="Select Date"&gt;&lt;/datepicker&gt;</code></pre> </p>
-            <p> For more information about Vue Datepicker, see<a href="https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme" target="_"> Here</a></p>
-        </div>
+            <h5 id="forms-datepicker">Vue DatePicker: </h5>
+            <div>
+                <p>Simple Datepicker component with a vareity of options and customizations.</p>
+                <h6>For Local Use:</h6>
+                <p>
+                    <pre><code class="language-javascript">import Datepicker from 'vuejs-datepicker'</code></pre>
+                </p>
+                <h6>Template Structure</h6>
+                <p>
+                    <pre><code class="language-html">&lt;datepicker placeholder="Select Date"&gt;&lt;/datepicker&gt;</code></pre> </p>
+                <p> For more information about Vue Datepicker, see
+                    <a href="https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme"
+                        target="_"> Here</a>
+                </p>
+            </div>
 
-        <h5 id="forms-colorpicker">Vue ColorPicker: </h5>
-        <div>
-            <p>Color Pickers for Sketch, Photoshop, Chrome.</p>
-            <p>Here, for demo purpose we import all this ColorPicker in one file, if you want particular ColorPicker you have to import that one only.</p>
-            <h6>For Local Use:</h6>
-            <p>
-                <pre><code class="language-javascript">import { Grayscale, Photoshop, Material, Compact, Swatches, Slider, Chrome, Sketch } from 'vue-color'</code></pre>
-            </p>
-            <h6>Template Structure</h6>
-        <p><pre><code class="language-html">
+            <h5 id="forms-colorpicker">Vue ColorPicker: </h5>
+            <div>
+                <p>Color Pickers for Sketch, Photoshop, Chrome.</p>
+                <p>Here, for demo purpose we import all this ColorPicker in one file, if you want particular ColorPicker you
+                    have to import that one only.</p>
+                <h6>For Local Use:</h6>
+                <p>
+                    <pre><code class="language-javascript">import { Grayscale, Photoshop, Material, Compact, Swatches, Slider, Chrome, Sketch } from 'vue-color'</code></pre>
+                </p>
+                <h6>Template Structure</h6>
+                <p>
+                    <pre><code class="language-html">
 &lt;!-- suppose you have the data 'colors' in your component --&gt;
 &lt;material-picker v-model="colors" /&gt;
 &lt;compact-picker v-model="colors" /&gt;
@@ -512,18 +704,24 @@
 &lt;chrome-picker v-model="colors" /&gt;
 &lt;photoshop-picker v-model="colors" /&gt;
             </code></pre> </p>
-            <p> For more information about Vue ColorPicker, see<a href="https://github.com/xiaokaike/vue-color" target="_"> Here</a></p>
-        </div>
+                <p> For more information about Vue ColorPicker, see
+                    <a href="https://github.com/xiaokaike/vue-color" target="_">
+                    Here</a>
+                </p>
+            </div>
 
-        <h5 id="forms-validation">Vuelidate Validation: </h5>
-        <div>
-            <p>Vuelidate is the default validation library which is used throughout Laraspace, thus it is already imported globally in <span class="highlight"> resources/assets/js/bootstrap.js</span> file so you can use it directly in your forms as required.</p>
-            <h6>Global usage:</h6>
-            <p>
-                <pre><code class="language-javascript">import Vue from 'vue'&#13;import VeeValidate from 'vee-validate';&#13;Vue.use(Vuelidate)</code></pre>
-            </p>
-            <h6>Template Structure</h6>
-        <p><pre><code class="language-javascript">import { required, minLength, between } from 'vuelidate/lib/validators'
+            <h5 id="forms-validation">Vuelidate Validation: </h5>
+            <div>
+                <p>Vuelidate is the default validation library which is used throughout Laraspace, thus it is already imported
+                    globally in
+                    <span class="highlight"> resources/assets/js/bootstrap.js</span> file so you can use it directly in your forms as required.</p>
+                <h6>Global usage:</h6>
+                <p>
+                    <pre><code class="language-javascript">import Vue from 'vue'&#13;import VeeValidate from 'vee-validate';&#13;Vue.use(Vuelidate)</code></pre>
+                </p>
+                <h6>Template Structure</h6>
+                <p>
+                    <pre><code class="language-javascript">import { required, minLength, between } from 'vuelidate/lib/validators'
 export default {
   data() {
       return {
@@ -542,170 +740,222 @@ export default {
     }
 }
             </code></pre> </p>
-            <p> For more information about Vuelidate, see<a href="https://monterail.github.io/vuelidate/#sub-basic-form" target="_"> Here</a></p>
-        </div>
+                <p> For more information about Vuelidate, see
+                    <a href="https://monterail.github.io/vuelidate/#sub-basic-form"
+                        target="_"> Here</a>
+                </p>
+            </div>
 
-        <h5>VeeValidate: </h5>
-        <div>
-            <p>VeeValidate is an alternate validation library similar to Vuelidate. It has plenty of validation rules and support for custom ones
-            as well. It is template based so it is similar and familiar with the HTML5 validation API. You can validate HTML5 inputs
-            as well as custom Vue components.</p>
-            <h6>Global usage:</h6>
+            <h5>VeeValidate: </h5>
+            <div>
+                <p>VeeValidate is an alternate validation library similar to Vuelidate. It has plenty of validation rules and
+                    support for custom ones as well. It is template based so it is similar and familiar with the HTML5 validation
+                    API. You can validate HTML5 inputs as well as custom Vue components.</p>
+                <h6>Global usage:</h6>
+                <p>
+                    <pre><code class="language-javascript">import Vue from 'vue'&#13;import Vuelidate from 'vuelidate'&#13;Vue.use(Vuelidate)</code></pre>
+                </p>
+                <p> For more information about VeeValidate, see
+                    <a href="https://baianat.github.io/vee-validate/" target="_">
+                    Here</a>
+                </p>
+            </div>
+
+
+        </section>
+        <section id="navigation">
+            <h3>
+                <i class="fa fa-ship"></i> Navigation</h3>
+            <p>Laraspace uses
+                <a href="https://github.com/vuejs/vue-router">Vue-Router</a> for Routing, Thus you are required to have a basic knowledge of how it works.</p>
+            <p>The
+                <span class="highlight">resources/assets/js/router.js</span> file contains all the route definitions for the Application & once you've
+                defined a certain route, you can edit
+                <span class="highlight">SiteSidebar.vue</span> or
+                <span class="highlight">SiteHeaderBottom.vue</span> Partial depending on your Layout choice to add a link in Navigation Menu.</p>
             <p>
-                <pre><code class="language-javascript">import Vue from 'vue'&#13;import Vuelidate from 'vuelidate'&#13;Vue.use(Vuelidate)</code></pre>
+                For more information about Router, see
+                <a href="http://router.vuejs.org/"> Here</a>
             </p>
-            <p> For more information about VeeValidate, see<a href="https://baianat.github.io/vee-validate/" target="_"> Here</a></p>
-        </div>
 
+        </section>
 
-    </section>
-    <section id="navigation">
-        <h3><i class="fa fa-ship"></i> Navigation</h3>
-        <p>Laraspace uses <a href="https://github.com/vuejs/vue-router">Vue-Router</a> for Routing, Thus you are required to have a basic knowledge of how it works.</p>
-        	<p>The <span class="highlight">resources/assets/js/router.js</span> file contains all the route definitions for the Application & once you've defined a certain route, you can edit <span class="highlight">SiteSidebar.vue</span> or
-            <span class="highlight">SiteHeaderBottom.vue</span> Partial depending on your Layout choice to add a link in Navigation Menu.</p>
-        <p>
-            For more information about Router, see <a href="http://router.vuejs.org/"> Here</a>
-        </p>
-
-    </section>
-
-    <section id="plugins">
-        <h3><i class="fa fa-rocket"></i> Plugins
-            <small>Custom JS/CSS Files</small>
-        </h3>
-        <p>All the plugins are stored in <span class="highlight">resources/assets/plugins</span>. You can include any
-            required plugin in your frontend or admin as they are stored on a location which can be accessed easily by
-            both.</p>
-        <p>To add a plugin into backend you can do the following:</p>
-        <ol>
-            <li>Create a directory in <span class="highlight">resources/assets/plugins</span> with your plugin name
-            </li>
-            <li>Add the js files into <span class="highlight">webpack.mix.js</span></li>
-            <li>Add the .scss file to <span class="highlight">resources/assets/sass/laraspace.scss</span>. <br>Note :
-                CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then you can
-                just paste the styles into your custom .scss file.
-            </li>
-            <li>run <span class="highlight">npm run webpack</span> command to merge the added JS files and compile the SASS files.
-            </li>
-        </ol>
-    </section>
-    <section id="settings-api">
-        <h3><i class="fa fa-cogs"></i> Settings API</h3>
-        <p>Laraspace has site-settings built-in, thus you can use the <span class="highlight">Setting</span> Model
-            Facade to get the current settings and set new settings for your site.</p>
-        <h6>Add new Setting</h6>
-          <pre><code class="language-php">Setting::set('facebook_link','http://facebook.com/laraspace');</code></pre>
-        <h6>Get existing Setting</h6>
-          <pre><code class="language-php">Setting::get('facebook_link'); // returns "http://facebook.com/laraspace"</code></pre>
-        <p>You can also use <a href="#helpers"><span class="highlight">get_setting()</span></a> helper function to get
-            the setting value inside any of your views.</p>
-    </section>
-    <section id="helpers">
-        <h3><i class="fa fa-life-ring"></i> Helpers</h3>
-        <h5>Vue:</h5>
-        <p>We have provided some helper functions in <span class="highlight">resources/assets/js/helpers/utilities.js</span> file to make your development easier.</p>
-        <ul class="function-list">
-            <li>
-                <span class="function-name">setLayout(layoutName)</span>
-                <p>This function is used to set a specific Layout. It allows <span class="highlight">default</span>, <span class="highlight">icon-sidebar</span> & <span class="highlight">horizontal</span></p>
-                <pre><code class="language-js">this.$utils.setLayout('icon-sidebar')</code></pre>
-            </li>
-            <li>
-                <span class="function-name">setSkin(skinName)</span>
-                <p>This function is used to set a Skin, It allows <span class="highlight">default</span>, <span class="highlight">tyrell</span>, <span class="highlight">arryn</span>, <span class="highlight">lannister</span>, <span class="highlight">stark</span> & <span class="highlight">targaryen</span></p>
-                <pre><code class="language-js">this.$utils.setSkin('tyrell')</code></pre>
-            </li>
-            <li>
-                <span class="function-name">addClass(element, className)</span>
-                <p>This function is used to add a class to an existing element. It's not recommended to use this approach in your application but we use this function internally in Laraspace to set the specific layout/skin classes on body.</p>
-                <pre><code class="language-js">addClass('is-invalid')</code></pre>
-            </li>
-            <li>
-                <span class="function-name">hasClass(element, className)</span>
-                <p>To check if a given element has the given class.</p>
-                <pre><code class="language-js">hasClass('is-invalid')</code></pre>
-            </li>
-        </ul>
-        <h5>Laravel : </h5>
-        <ul class="function-list">
-            <li>
-                <span class="function-name">set_active()</span>
-                <p>This function returns 'active' class if the current url matches the provided pattern. It is used to
-                    set 'active' state on the menu</p>
-              <pre><code class="language-php">// Current URL is /admin/dashboard
+        <section id="plugins">
+            <h3>
+                <i class="fa fa-rocket"></i> Plugins
+                <small>Custom JS/CSS Files</small>
+            </h3>
+            <p>All the plugins are stored in
+                <span class="highlight">resources/assets/plugins</span>. You can include any required plugin in your frontend or admin as they are
+                stored on a location which can be accessed easily by both.
+            </p>
+            <p>To add a plugin into backend you can do the following:</p>
+            <ol>
+                <li>Create a directory in
+                    <span class="highlight">resources/assets/plugins</span> with your plugin name
+                </li>
+                <li>Add the js files into
+                    <span class="highlight">webpack.mix.js</span>
+                </li>
+                <li>Add the .scss file to
+                    <span class="highlight">resources/assets/sass/laraspace.scss</span>.
+                    <br>Note : CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then
+                    you can just paste the styles into your custom .scss file.
+                </li>
+                <li>run
+                    <span class="highlight">npm run webpack</span> command to merge the added JS files and compile the SASS files.
+                </li>
+            </ol>
+        </section>
+        <section id="settings-api">
+            <h3>
+                <i class="fa fa-cogs"></i> Settings API</h3>
+            <p>Laraspace has site-settings built-in, thus you can use the
+                <span class="highlight">Setting</span> Model Facade to get the current settings and set new settings for your site.</p>
+            <h6>Add new Setting</h6>
+            <pre><code class="language-php">Setting::set('facebook_link','http://facebook.com/laraspace');</code></pre>
+            <h6>Get existing Setting</h6>
+            <pre><code class="language-php">Setting::get('facebook_link'); // returns "http://facebook.com/laraspace"</code></pre>
+            <p>You can also use
+                <a href="#helpers">
+                    <span class="highlight">get_setting()</span>
+                </a> helper function to get the setting value inside any of your views.</p>
+        </section>
+        <section id="helpers">
+            <h3>
+                <i class="fa fa-life-ring"></i> Helpers</h3>
+            <h5>Vue:</h5>
+            <p>We have provided some helper functions in
+                <span class="highlight">resources/assets/js/helpers/utilities.js</span> file to make your development easier.</p>
+            <ul class="function-list">
+                <li>
+                    <span class="function-name">setLayout(layoutName)</span>
+                    <p>This function is used to set a specific Layout. It allows
+                        <span class="highlight">default</span>,
+                        <span class="highlight">icon-sidebar</span> &
+                        <span class="highlight">horizontal</span>
+                    </p>
+                    <pre><code class="language-js">this.$utils.setLayout('icon-sidebar')</code></pre>
+                </li>
+                <li>
+                    <span class="function-name">setSkin(skinName)</span>
+                    <p>This function is used to set a Skin, It allows
+                        <span class="highlight">default</span>,
+                        <span class="highlight">tyrell</span>,
+                        <span class="highlight">arryn</span>,
+                        <span class="highlight">lannister</span>,
+                        <span class="highlight">stark</span> &
+                        <span class="highlight">targaryen</span>
+                    </p>
+                    <pre><code class="language-js">this.$utils.setSkin('tyrell')</code></pre>
+                </li>
+                <li>
+                    <span class="function-name">addClass(element, className)</span>
+                    <p>This function is used to add a class to an existing element. It's not recommended to use this approach
+                        in your application but we use this function internally in Laraspace to set the specific layout/skin
+                        classes on body.</p>
+                    <pre><code class="language-js">addClass('is-invalid')</code></pre>
+                </li>
+                <li>
+                    <span class="function-name">hasClass(element, className)</span>
+                    <p>To check if a given element has the given class.</p>
+                    <pre><code class="language-js">hasClass('is-invalid')</code></pre>
+                </li>
+            </ul>
+            <h5>Laravel : </h5>
+            <ul class="function-list">
+                <li>
+                    <span class="function-name">set_active()</span>
+                    <p>This function returns 'active' class if the current url matches the provided pattern. It is used to set
+                        'active' state on the menu</p>
+                    <pre><code class="language-php">// Current URL is /admin/dashboard
 
 set_active('/admin') // Returns : ''</code></pre>
-                <p>You can also use wildcards:</p>
-              <pre><code class="language-php">// Current URL is /admin/dashboard
+                    <p>You can also use wildcards:</p>
+                    <pre><code class="language-php">// Current URL is /admin/dashboard
 
 set_active('/admin*') // Returns : 'active'</code></pre>
-                <p>Set another class instead of 'active'. If you want multiple classes then you can just seperate them
-                    with a space.</p>
-              <pre><code class="language-php">// Current URL is /admin/dashboard
+                    <p>Set another class instead of 'active'. If you want multiple classes then you can just seperate them with
+                        a space.</p>
+                    <pre><code class="language-php">// Current URL is /admin/dashboard
 
 set_active('/admin/dashboard','active open') // Returns : 'active open'</code></pre>
-            </li>
-            <li>
-                <span class="function-name">get_setting()</span>
-                <p>This function returns the setting value for the provided key.</p>
-              <pre><code class="language-php">$facebook_url = get_setting('fb_url');</code></pre>
-            </li>
-            <li>
-                <span class="function-name">is_url()</span>
-                <p>This function checks if the provided pattern matches the current URL.</p>
-              <pre><code class="language-php">// Current URL is /admin/dashboard
+                </li>
+                <li>
+                    <span class="function-name">get_setting()</span>
+                    <p>This function returns the setting value for the provided key.</p>
+                    <pre><code class="language-php">$facebook_url = get_setting('fb_url');</code></pre>
+                </li>
+                <li>
+                    <span class="function-name">is_url()</span>
+                    <p>This function checks if the provided pattern matches the current URL.</p>
+                    <pre><code class="language-php">// Current URL is /admin/dashboard
 
 $is_dashboard = is_url('admin/dashboard'); // Returns : true</code></pre>
-            </li>
-            <li>
-                <span class="function-name">clean_slug()</span>
-                <p>This function replaces white-spaces with hyphens and removes special characters.</p>
-              <pre><code class="language-php">$post_slug = clean_slug('My Awesome Post Slug$'); //Returns : My-Awesome-Post-Slug</code></pre>
-            </li>
-        </ul>
-    </section>
-    <section id="skins">
-        <h3><i class="fa fa-cogs"></i> Skins</h3>
-        <p>Laraspace now ships with 6 different Skins : </p>
-        <ul>
-            <li>default</li>
-            <li>arryn</li>
-            <li>tyrell</li>
-            <li>targaryen</li>
-            <li>lannister</li>
-            <li>stark</li>
-        </ul>
-        <p>To change the skin of your application just add the class "skin-{skin-name}" to the <span class="highlight">&lt;body&gt;</span> tag inside <span class="highlight">app.blade.php</span> file.</p>
-        <p>For example : <span class="highlight">&lt;body class="skin-tyrell"&gt;</span></p>
-    </section>
-    <section id="change-log">
-        <h3><i class="fa fa-binoculars"></i> What's New</h3>
-        <h5 class="m-b-1"><span class="highlight">Version : 1.5 </span></h5>
-        <p>This update is more focused towards the Vue Version, click here to know more about it: <a href="vue.html#change-log"></a></p>
-        <ul>
-            <li>Laravel 5.6 Support</li>
-            <li>Removed all jQuery plugins</li>
-            <li>Added 15+ new custom Vue Components</li>
-            <li>Bug fixes</li>
-        </ul>
-    </section>
-    <section id="upgrade">
-        <h3><i class="fa fa-plane"></i> Upgrade</h3>
-        <p>You can follow the steps below to upgrade laraspace:</p>
-        <h6><span class="highlight">Upgrade from Version 1.3.1 to 1.4 / 1.4 to 1.5 :</span></h6>
-        <ul class="upgrade-list">
-            <li>This update contains a lot of new components and changes thus we suggest you to start with a fresh 1.4 project and copy over your modifications as needed.</li>
-            <li>If you have any questions, you can contact us at codecanyon.</li>
-        </ul>
-    </section>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/tether.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/clipboard.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/prism.js"></script>
+                </li>
+                <li>
+                    <span class="function-name">clean_slug()</span>
+                    <p>This function replaces white-spaces with hyphens and removes special characters.</p>
+                    <pre><code class="language-php">$post_slug = clean_slug('My Awesome Post Slug$'); //Returns : My-Awesome-Post-Slug</code></pre>
+                </li>
+            </ul>
+        </section>
+        <section id="skins">
+            <h3>
+                <i class="fa fa-cogs"></i> Skins</h3>
+            <p>Laraspace now ships with 6 different Skins : </p>
+            <ul>
+                <li>default</li>
+                <li>arryn</li>
+                <li>tyrell</li>
+                <li>targaryen</li>
+                <li>lannister</li>
+                <li>stark</li>
+            </ul>
+            <p>To change the skin of your application just add the class "skin-{skin-name}" to the
+                <span class="highlight">&lt;body&gt;</span> tag inside
+                <span class="highlight">app.blade.php</span> file.</p>
+            <p>For example :
+                <span class="highlight">&lt;body class="skin-tyrell"&gt;</span>
+            </p>
+        </section>
+        <!-- <section id="change-log">
+            <h3>
+                <i class="fa fa-binoculars"></i> What's New</h3>
+            <h5 class="m-b-1">
+                <span class="highlight">Version : 1.5 </span>
+            </h5>
+            <p>This update is more focused towards the Vue Version, click here to know more about it:
+                <a href="vue.html#change-log"></a>
+            </p>
+            <ul>
+                <li>Laravel 5.7 Support</li>
+                <li>Removed all jQuery plugins</li>
+                <li>Added 15+ new custom Vue Components</li>
+                <li>Bug fixes</li>
+            </ul>
+        </section> -->
+        <!-- <section id="upgrade">
+            <h3>
+                <i class="fa fa-plane"></i> Upgrade</h3>
+            <p>You can follow the steps below to upgrade laraspace:</p>
+            <h6>
+                <span class="highlight">Upgrade from Version 1.3.1 to 1.4 / 1.4 to 1.5 :</span>
+            </h6>
+            <ul class="upgrade-list">
+                <li>This update contains a lot of new components and changes thus we suggest you to start with a fresh 1.4 project
+                    and copy over your modifications as needed.</li>
+                <li>If you have any questions, you can contact us at codecanyon.</li>
+            </ul>
+        </section> -->
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/tether.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/prism.js"></script>
 </body>
+
 </html>

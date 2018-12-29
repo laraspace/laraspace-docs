@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Laraspace - HTML - Documentation</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -8,148 +9,211 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body class="sidebar-default">
-<header class="site-header">
-    <a href="#" class="nav-toggle">
-        <div class="hamburger hamburger--arrowturn">
-            <div class="hamburger-box">
-                <div class="hamburger-inner"></div>
+    <header class="site-header">
+        <a href="#" class="nav-toggle">
+            <div class="hamburger hamburger--arrowturn">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
             </div>
-        </div>
-    </a>
-    <a href="#" class="brand-main"><img src="img/logo.png" alt="Laraspace Logo"></a>
-    <ul class="action-list">
-        <li><a href="index.html">Laravel</a></li>
-        <li><a href="vue.html">Vue</a></li>
-        <li class="active"><a href="html.html">HTML</a></li>
-    </ul>
-</header>
-<div class="sidebar-left" id="main">
-    <ul class="side-nav">
-        <li><a href="#getting-started"><i class="fa fa-plane"></i> Getting Started</a></li>
-        <li><a href="#vuejs-workflow"><i class="fa fa-code"></i> VueJS Workflow</a></li>
-        <li><a href="#sass-workflow"><i class="fa fa-compress"></i> Sass Workflow</a></li>
-        <li><a href="#plugins"><i class="fa fa-rocket"></i> Plugins</a></li>
-        <li><a href="#skins"><i class="fa fa-cogs"> </i> Skins</a></li>
-    </ul>
-</div>
-<div class="mobile-menu-overlay"></div>
-<div class="main-content">
-    <section id="getting-started">
-        <h3 class="no-mt"><i class="fa fa-plane"></i> Getting Started</h3>
-        <p>Laraspace is an Admin starter template for <a href="http://laravel.com">Laravel 5.6</a> PHP Framework which
-            includes all the necessary boilerplate for your next web application.</p>
-        <h5>Installation:</h5>
-        <ol class="step-list">
-            <li>Unzip the downloaded folder.</li>
-            <li>Install NPM globally if you haven't installed that already , for more information please refer this <a
-                    href="https://docs.npmjs.com/getting-started/installing-node">link</a></li>
-            <li>After installing NPM globally , run <span class="highlight">npm install</span> inside your webroot , it
-                will download all the required dependencies.
+        </a>
+        <a href="#" class="brand-main">
+            <img src="img/logo.png" alt="Laraspace Logo">
+        </a>
+        <ul class="action-list">
+            <li>
+                <a href="index.html">Laravel</a>
             </li>
-            <li>You are ready to launch!</li>
-        </ol>
-    </section>
-    <section id="vuejs-workflow">
-        <h3><i class="fa fa-code"></i> Vuejs Workflow</h3>
-        <p>Laraspace supports VueJS but if you don't wish to include VueJS in your project then its perfectly fine
-            because its optional. If you haven't heard about VueJS then you learn more about it <a
-                    href="http://vuejs.org">here</a></p>
-        <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out <span
-                class="highlight">webpack.mix.js</span> for underlying code.</p>
-        <p>All Laraspace VueJS files are located in <span class="highlight"> assets/vue </span> folder.</p>
-        <h5>Directory & File Structure for VueJS</h5>
-        <div class="form-text">
-            <ul class="directory-list">
-                <li><i class="fa fa-folder"></i> <span>components</span> : Vue Components</li>
-                <li><i class="fa fa-file"></i> <span>pages</span> : This directory contains all the files which are
-                    supposed to be bundled up for specific pages which require VueJS
-                </li>
-            </ul>
-        </div>
-        <h5>Compiling Assets</h5>
-        <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you can use :</p>
-        <dl class="row">
-            <dt class="col-sm-3">npm run dev :</dt>
-            <dd class="col-sm-9"> Compile assets without watch</dd>
-
-            <dt class="col-sm-3">npm run watch :</dt>
-            <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
-
-            <dt class="col-sm-3">npm run production :</dt>
-            <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
-        </dl>
-        <p>You can read more about Laravel Mix <a href="https://laravel.com/docs/5.6/mix">here</a>.</p>
-    </section>
-    <section id="sass-workflow">
-        <h3><i class="fa fa-compress"></i> Sass Workflow</h3>
-        <p>All Laraspace Sass files are located in <span class="highlight"> sass </span>
-            folder. <br> Tip: You can remove the components which you're not gonna use inside your project to reduce
-            the filesize.</p>
-        </p>
-        <h5>Directory & File Structure for SASS</h5>
-        <div class="form-text">
-            <ul class="directory-list">
-                <li><i class="fa fa-folder"></i> <span>layouts</span> : styles for Laraspace layout
-                </li>
-                <li><i class="fa fa-folder"></i> <span>pages</span> : specific page styles
-                </li>
-                <li><i class="fa fa-folder"></i> <span>components</span> : styles for components like buttons , cards &
-                    tabs
-                </li>
-                <li><i class="fa fa-folder"></i> <span>partials</span> : styles for layout partials , i.e header ,
-                    footer & sidebar
-                </li>
-                <li><i class="fa fa-file"></i> <span>laraspace.scss</span> : main entry point of all sass files.</li>
-                <li><i class="fa fa-file"></i> <span>variables.scss</span> : main config file</li>
-                <li><i class="fa fa-file"></i> <span>base.scss</span> : base styles for Laraspace</li>
-                <li><i class="fa fa-file"></i> <span>demo.scss</span> : styles for demo , you can remove the reference
-                    to this file.
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="plugins">
-        <h3><i class="fa fa-rocket"></i> Plugins
-            <small>Custom JS/CSS Files</small>
-        </h3>
-        <p>All the plugins are stored in <span class="highlight">assets/plugins</span>. You can include any
-            required plugin in your frontend or admin as they are stored on a location which can be accessed easily by
-            both.</p>
-        <p>To add a plugin into backend you can do the following:</p>
-        <ol>
-            <li>Create a directory in <span class="highlight">assets/plugins</span> with your plugin name
+            <li>
+                <a href="vue.html">Vue</a>
             </li>
-            <li>Add the js files into <span class="highlight">webpack.mix.js</span></li>
-            <li>Add the .scss file to <span class="highlight">sass/laraspace.scss</span>. <br>Note :
-                CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then you can
-                just paste the styles into your custom .scss file.
+            <li class="active">
+                <a href="html.html">HTML</a>
             </li>
-            <li>run <span class="highlight">npm run webpack</span> command to merge the added JS files and compile the SASS files.
-            </li>
-        </ol>
-    </section>
-    <section id="skins">
-        <h3><i class="fa fa-cogs"></i> Skins</h3>
-        <p>Laraspace now ships with 6 different Skins : </p>
-        <ul>
-            <li>default</li>
-            <li>arryn</li>
-            <li>tyrell</li>
-            <li>targaryen</li>
-            <li>lannister</li>
-            <li>stark</li>
         </ul>
-        <p>To change the skin of your application just add the class "skin-{skin-name}" to the <span class="highlight">&lt;body&gt;</span> tag inside <span class="highlight">html</span> file.</p>
-        <p>For example : <span class="highlight">&lt;body class="skin-tyrell"&gt;</span></p>
-    </section>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/tether.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/clipboard.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/prism.js"></script>
+    </header>
+    <div class="sidebar-left" id="main">
+        <ul class="side-nav">
+            <li>
+                <a href="#getting-started">
+                    <i class="fa fa-plane"></i> Getting Started</a>
+            </li>
+            <li>
+                <a href="#vuejs-workflow">
+                    <i class="fa fa-code"></i> VueJS Workflow</a>
+            </li>
+            <li>
+                <a href="#sass-workflow">
+                    <i class="fa fa-compress"></i> Sass Workflow</a>
+            </li>
+            <li>
+                <a href="#plugins">
+                    <i class="fa fa-rocket"></i> Plugins</a>
+            </li>
+            <li>
+                <a href="#skins">
+                    <i class="fa fa-cogs"> </i> Skins</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+    <div class="main-content">
+        <section id="getting-started">
+            <h3 class="no-mt">
+                <i class="fa fa-plane"></i> Getting Started</h3>
+            <p>Laraspace is an Admin starter template for
+                <a href="http://laravel.com">Laravel 5.7</a> PHP Framework which includes all the necessary boilerplate for your next web application.</p>
+            <h5>Installation:</h5>
+            <ol class="step-list">
+                <li>Unzip the downloaded folder.</li>
+                <li>Install NPM globally if you haven't installed that already , for more information please refer this
+                    <a href="https://docs.npmjs.com/getting-started/installing-node">link</a>
+                </li>
+                <li>After installing NPM globally , run
+                    <span class="highlight">npm install</span> inside your webroot , it will download all the required dependencies.
+                </li>
+                <li>You are ready to launch!</li>
+            </ol>
+        </section>
+        <section id="vuejs-workflow">
+            <h3>
+                <i class="fa fa-code"></i> Vuejs Workflow</h3>
+            <p>Laraspace supports VueJS but if you don't wish to include VueJS in your project then its perfectly fine because
+                its optional. If you haven't heard about VueJS then you learn more about it
+                <a href="http://vuejs.org">here</a>
+            </p>
+            <p>We have used Webpack to bundle up the VueJs files using Laravel Mix. You can check out
+                <span class="highlight">webpack.mix.js</span> for underlying code.</p>
+            <p>All Laraspace VueJS files are located in
+                <span class="highlight"> assets/vue </span> folder.</p>
+            <h5>Directory & File Structure for VueJS</h5>
+            <div class="form-text">
+                <ul class="directory-list">
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>components</span> : Vue Components</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>pages</span> : This directory contains all the files which are supposed to be bundled up for specific
+                        pages which require VueJS
+                    </li>
+                </ul>
+            </div>
+            <h5>Compiling Assets</h5>
+            <p>Laraspace uses Laravel mix for compiling all the plugins & dashboard's assets. Below is a list of commands you
+                can use :</p>
+            <dl class="row">
+                <dt class="col-sm-3">npm run dev :</dt>
+                <dd class="col-sm-9"> Compile assets without watch</dd>
+
+                <dt class="col-sm-3">npm run watch :</dt>
+                <dd class="col-sm-9">Compile assets and watch the files for changes</dd>
+
+                <dt class="col-sm-3">npm run production :</dt>
+                <dd class="col-sm-9">Compile assets for production with code minification & set the NODE_ENV to production</dd>
+            </dl>
+            <p>You can read more about Laravel Mix
+                <a href="https://laravel.com/docs/5.6/mix">here</a>.</p>
+        </section>
+        <section id="sass-workflow">
+            <h3>
+                <i class="fa fa-compress"></i> Sass Workflow</h3>
+            <p>All Laraspace Sass files are located in
+                <span class="highlight"> sass </span>
+                folder.
+                <br> Tip: You can remove the components which you're not gonna use inside your project to reduce the filesize.</p>
+            </p>
+            <h5>Directory & File Structure for SASS</h5>
+            <div class="form-text">
+                <ul class="directory-list">
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>layouts</span> : styles for Laraspace layout
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>pages</span> : specific page styles
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>components</span> : styles for components like buttons , cards & tabs
+                    </li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        <span>partials</span> : styles for layout partials , i.e header , footer & sidebar
+                    </li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>laraspace.scss</span> : main entry point of all sass files.</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>variables.scss</span> : main config file</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>base.scss</span> : base styles for Laraspace</li>
+                    <li>
+                        <i class="fa fa-file"></i>
+                        <span>demo.scss</span> : styles for demo , you can remove the reference to this file.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="plugins">
+            <h3>
+                <i class="fa fa-rocket"></i> Plugins
+                <small>Custom JS/CSS Files</small>
+            </h3>
+            <p>All the plugins are stored in
+                <span class="highlight">assets/plugins</span>. You can include any required plugin in your frontend or admin as they are stored on
+                a location which can be accessed easily by both.
+            </p>
+            <p>To add a plugin into backend you can do the following:</p>
+            <ol>
+                <li>Create a directory in
+                    <span class="highlight">assets/plugins</span> with your plugin name
+                </li>
+                <li>Add the js files into
+                    <span class="highlight">webpack.mix.js</span>
+                </li>
+                <li>Add the .scss file to
+                    <span class="highlight">sass/laraspace.scss</span>.
+                    <br>Note : CSS files cannot be imported in sass files. Thus If the plugin does not contain a sass file then
+                    you can just paste the styles into your custom .scss file.
+                </li>
+                <li>run
+                    <span class="highlight">npm run webpack</span> command to merge the added JS files and compile the SASS files.
+                </li>
+            </ol>
+        </section>
+        <section id="skins">
+            <h3>
+                <i class="fa fa-cogs"></i> Skins</h3>
+            <p>Laraspace now ships with 6 different Skins : </p>
+            <ul>
+                <li>default</li>
+                <li>arryn</li>
+                <li>tyrell</li>
+                <li>targaryen</li>
+                <li>lannister</li>
+                <li>stark</li>
+            </ul>
+            <p>To change the skin of your application just add the class "skin-{skin-name}" to the
+                <span class="highlight">&lt;body&gt;</span> tag inside
+                <span class="highlight">html</span> file.</p>
+            <p>For example :
+                <span class="highlight">&lt;body class="skin-tyrell"&gt;</span>
+            </p>
+        </section>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/tether.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/prism.js"></script>
 </body>
+
 </html>

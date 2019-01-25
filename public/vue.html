@@ -125,20 +125,17 @@
             </ul>
             <h5>Installation:</h5>
             <ol class="step-list">
-                <li>Clone or Download the Laraspace repository from:
-                    <span class="highlight">http://github.com/laraspace/laraspace-vue</span>
-                </li>
-                <li>Unzip the downloaded folder.</li>
+                <li>Run <span class="highlight">composer create-project --prefer-dist laraspace/laraspace-vue</span> </li>
                 <li>Using your preferred terminal , go to the laraspace folder and run the following command to set a random
                     secure Application Key
                     <span class="highlight">php artisan key:generate</span>
                 </li>
+                <li>Open .env file in your favorite text editor and set the database credentials.</li>
                 <li>Open
                     <span class="highlight">database/seeds/UsersTableSeeder.php</span> and change the admin's email & password to your preference.</li>
-                <li>Open .env file in your favorite text editor and set the database credentials.</li>
                 <li>
-                    <span class="highlight">php artisan migrate --seed</span> run this command for migrating & seeding the database inside your app
-                    folder.
+                    <span class="highlight">php artisan migrate --seed</span> run this command to migrate & seed the database. ( Make sure that you're
+                    inside the app's root directory )
                 </li>
                 <li>Install NPM globally if you haven't installed that already , for more information please refer this
                     <a href="https://docs.npmjs.com/getting-started/installing-node">link</a>
@@ -146,6 +143,8 @@
                 <li>After installing NPM globally , run
                     <span class="highlight">npm install</span> inside your webroot , it will download all the required dependencies.
                 </li>
+                <li>Run <span class="highlight">npm run dev</span> for compiling sass and js files.</li>
+                <li>Laraspace makes use of Laravel Mix for compiling sass files and js files (webpack).</li>
                 <li>You are ready to launch!</li>
             </ol>
         </section>
